@@ -51,6 +51,8 @@ menu:
     url: /posts/
   - title: About
     url: /about/
+  - title: Project
+    url: /project/
   - title: Example1
     url: /example1/
   - title: Example2
