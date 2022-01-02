@@ -9,18 +9,19 @@ author1:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about: |
     안녕하세요 !      \
-    새로운 것을 찾아 항해하고 끝까지 포기하지 않는      \
-    개발자 윤성연 입니다.
+    <span style="color: darkorange">새로운 것을 찾아 항해하고 끝까지 포기하지 않는</span>      \
+    개발자 <span style="color: teal">**윤성연**</span>
+     입니다.
 
-    Please check my [CV](/assets/CV.pdf)
+    <span style="color: gray">Please check my [Résumé](/assets/Résumé.pdf)
 
     이름 : 윤성연 (steven)     \
     닉네임 : 윤바다 (yoonOcean)     \
-    나이 / 성별 : 28살 / 남     
+    E-mail : steven_yoon1009@naver.com
 
-    GitHub : https://github.com/steven-yn     \
-    Blog : https://yoonocean.tistory.com/     \
-    React Blog Project : http://3.143.160.44:4000/
+    * GitHub : <a href="https://github.com/steven-yn" style="color: skyblue">https://github.com/steven-yn<a />
+    * Blog : <a href="https://yoonocean.tistory.com/" style="color: skyblue">https://yoonocean.tistory.com/<a />
+    * React Blog Project : <a href="http://3.143.160.44:4000/" style="color: skyblue">http://3.143.160.44:4000/ <a />
 
   # This photo will be used in the about section
   picture:
