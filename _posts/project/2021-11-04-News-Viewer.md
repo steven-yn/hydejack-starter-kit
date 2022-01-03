@@ -26,16 +26,38 @@ categories:
 
 ## Content
 
-<img src="/assets/img/project/News-Viewer/mainPage.jpg" width="" height="" title="메인(전체보기) 페이지" alt = ""> | <img src="/assets/img/project/News-Viewer/waitPage.jpg" width="" height="" title="대기 페이지" alt = "">
-
-<img src="/assets/img/project/News-Viewer/sportsPage.jpg"> | <img src="/assets/img/project/News-Viewer/newsPage.jpg" width="" height="" title="관리자 페이지" alt = "">
+<div class="main_center">
+    <div><img src= "/assets/img/project/News-Viewer/mainPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="메인(전체보기) 페이지"></div>
+    <div><img src="/assets/img/project/News-Viewer/waitPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="대기 페이지"></div>
+    <div><img src= "/assets/img/project/News-Viewer/sportsPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="스포츠 카테고리"></div>
+    <div><img src= "/assets/img/project/News-Viewer/newsPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="뉴스 클릭시 이동"></div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.main_center').slick({
+            autoplay : true, /*자동으로 슬라이딩됨*/
+            dots : true, /* 하단 점 버튼 */
+            speed : 700 /* 이미지가 슬라이딩시 걸리는 시간 */,
+            infinite : true,
+            autoplaySpeed : 5000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */,
+            arrows : true,
+            slidesToShow : 1,
+            slidesToScroll : 1,
+            touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+            nextArrows : true, /* 넥스트버튼 */
+            prevArrows : true,
+            arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+            fade : false
+        });
+    });
+</script>
 
 > <mark>News-Viewer</mark> 는 뉴스 API 를 받아와 렌더링하는 어플리케이션 입니다. \
 > 기본적으로 메인 페이지에서 카테고리에 상관없이 **전체보기** 로 뉴스를 보고, **카테고리**에 따라 관련 기사들을 볼수 있으며, 기사를 클릭하면 해당 기사를 발행한 신문사 사이트로 이동합니다.
 
 ## Link
 
-- **[Code (github)](https://github.com/steven-yn/News-Viewer)**
+- **[Code (github)](https://github.com/steven-yn/News-Viewer-React)**
 
 ## Demo
 
