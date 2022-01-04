@@ -49,8 +49,6 @@ author:
 menu:
   - title: About
     url: /about/
-  - title: Contents
-    url: /posts/
   - title: Project
     url: /project/
 

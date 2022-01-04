@@ -22,7 +22,7 @@ categories:
 　 \
 💡 사용 Stack 　　　　&nbsp;`ruby` `jekyll-theme` `Github-Pages`  \
   \
-🏢 활동 소속　　　　 &nbsp;PROJECT LION 의 면접관이 좋아하는 Git Portfolio 만들기 (with_GitBlog) 강의
+🏢 활동 소속　　　　 &nbsp;PROJECT LION 의 면접관이 좋아하는 Git Portfolio 만들기 　　　　　　　　　　&nbsp;(with_GitBlog) 강의
 
 ---
 
