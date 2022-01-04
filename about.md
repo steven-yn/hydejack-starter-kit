@@ -33,7 +33,7 @@ hide_description: true
 
   .list .bar-scroll {
     margin-top: 20px !important;
-    transition: transform 0.7s, opacity 0.7s !important;
+    transition: transform 0.5s, opacity 0.5s !important;
   }
 
 
@@ -93,24 +93,29 @@ hide_description: true
     })
 
     barElems.forEach(elem => {
-      if (isElementUnderBottom(elem, 50)) {
+      if (isElementUnderBottom(elem, -100)) {
         elem.style.opacity = "0";
-        elem.style.transform = 'translateX(-20px)';
+        elem.style.transform = 'translateX(-100px)';
 
-      } else if (elem.style.opacity === "1") {
+      } else {
+        elem.style.opacity = "1";
+        elem.style.transform = 'translateX(0px)';
+        
+      }
+    })
+    
+    if (barElems[0].style.opacity === "1") {
 
-        elem.addEventListener('transitionrun', move);
-
-        function move() {
-          bbarElems.forEach(eelem => {
-            if (eelem.style.width < "2%") {
-              let width = 1;
-              let sum = 1;
-              
-              var id = setInterval(frame, 7);
-              const barper = eelem.querySelector(".barper").innerText;
-
-              function frame() {
+      barElems[0].addEventListener('transitionstart', move);
+      function move() {
+        bbarElems.forEach(eelem => {
+          if (eelem.style.width < "2%") {
+            let width = 1;
+            let sum = 1;
+            
+            var id = setInterval(frame, 10);
+            const barper = eelem.querySelector(".barper").innerText;
+            function frame() {
               if (width >= 99) {
                   clearInterval(id);
               } else {
@@ -119,17 +124,11 @@ hide_description: true
                   sum += perwidth;
                   eelem.style.width = sum +'%';
               }
-              }
             }
-          })
-        }
-
-      } else {
-        elem.style.opacity = "1";
-        elem.style.transform = 'translateX(0px)';
-        
+          }
+        })
       }
-    })
+    }
   }
 
   window.addEventListener('scroll', handleScroll);
