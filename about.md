@@ -33,7 +33,7 @@ hide_description: true
 
   .list .bar-scroll {
     margin-top: 20px !important;
-    transition: transform 1.5s, opacity 1s !important;
+    transition: transform 0.7s, opacity 0.7s !important;
   }
 
 
@@ -93,22 +93,20 @@ hide_description: true
     })
 
     barElems.forEach(elem => {
-      if (isElementUnderBottom(elem, -100)) {
+      if (isElementUnderBottom(elem, 50)) {
         elem.style.opacity = "0";
-        elem.style.transform = 'translateX(-100px)';
+        elem.style.transform = 'translateX(-20px)';
 
-      } else {
-        elem.style.opacity = "1";
-        elem.style.transform = 'translateX(0px)';
-        elem.addEventListener('transitionstart', move);
+      } else if (elem.style.opacity === "1") {
+
+        elem.addEventListener('transitionrun', move);
 
         function move() {
           bbarElems.forEach(eelem => {
-            if (eelem.style.width >= "2%") {
-              return;
-            } else {
+            if (eelem.style.width < "2%") {
               let width = 1;
               let sum = 1;
+              
               var id = setInterval(frame, 7);
               const barper = eelem.querySelector(".barper").innerText;
 
@@ -125,6 +123,11 @@ hide_description: true
             }
           })
         }
+
+      } else {
+        elem.style.opacity = "1";
+        elem.style.transform = 'translateX(0px)';
+        
       }
     })
   }
