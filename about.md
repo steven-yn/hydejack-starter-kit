@@ -100,10 +100,10 @@ hide_description: true
       } else {
         elem.style.opacity = "1";
         elem.style.transform = 'translateX(0px)';
-        
+
       }
     })
-    
+
     if (barElems[0].style.opacity === "1") {
 
       barElems[0].addEventListener('transitionstart', move);
@@ -112,7 +112,7 @@ hide_description: true
           if (eelem.style.width < "2%") {
             let width = 1;
             let sum = 1;
-            
+
             var id = setInterval(frame, 10);
             const barper = eelem.querySelector(".barper").innerText;
             function frame() {
@@ -278,7 +278,7 @@ hide_description: true
             <div>
               <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2017-09-01T00:00:00+09:00"></time>
               <span style="margin-left: 7rem">
-                ( 성적장학금 4회 중 최우수 1회, 졸업작품 : 라즈베리파이를 활용한 드론설계(자유주제) )
+                ( 성적장학금 4회 , 4회중 최우수 1회, 졸업작품 : 라즈베리파이를 활용한 드론설계(자유주제) )
               </span>
             </div>
           </li>
