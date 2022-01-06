@@ -33,7 +33,7 @@ hide_description: true
 
   .list .bar-scroll {
     margin-top: 20px !important;
-    transition: transform 0.5s, opacity 0.5s !important;
+    transition: transform 1.5s, opacity 1.5s !important;
   }
 
 
@@ -133,6 +133,15 @@ hide_description: true
 
   window.addEventListener('scroll', handleScroll);
 </script>
+
+<br>
+
+_만약 PDF로 이 페이지를 보고 계시다면, \
+제 [포트폴리오 사이트](https://steven-yn.github.io)로 와서 봐주시면 감사하겠습니다._
+
+<br>
+<br>
+<br>
 
 <center>
 <span style="font-size:170%;font-weight:bold"> 윤성연
