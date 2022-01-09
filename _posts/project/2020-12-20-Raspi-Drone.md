@@ -11,8 +11,113 @@ categories:
 
 # RasberryPi-Drone
 
-* toc
-{:toc .large-only}
+<style>
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: 81%;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+  max-height: 750px;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+</style>
+
+<script>
+  $(document).ready(function() {
+    $('.main_center').slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector("#modalLayer");
+    const modBox = document.querySelector(".modalBox");
+    const modImg = document.querySelector(".modalImg");
+    modLayerElem.style.display = "block";
+
+    $(function(){
+      $('.modalBox').slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector("#modalLayer");
+    modLayerElem.style.display = "none";
+  }
+</script>
+
+- toc
+  {:toc .large-only}
 
 🔎 About 　　　　　　졸업작품 발표시 진행한 라즈베리파이를 활용한 드론설계 프로젝트 입니다. \
 　 \
@@ -29,35 +134,16 @@ categories:
 ## Content
 
 <div class="main_center">
-    <div><img src= "/assets/img/project/Raspi-FCC-And-Controller/fly-inside.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="실내비행"></div>
-    <div><img src="/assets/img/project/Raspi-FCC-And-Controller/ctrl.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="컨트롤러"></div>
-    <div><img src= "/assets/img/project/Raspi-FCC-And-Controller/Dev-Env.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="개발환경"></div>
-    <div><img src= "/assets/img/project/Raspi-FCC-And-Controller/ESC-test.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="ESC 단위실험"></div>
-    <div><img src= "/assets/img/project/Raspi-FCC-And-Controller/Landing-Skid.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="랜딩 스키드 제작"></div>
-    <div><img src= "/assets/img/project/Raspi-FCC-And-Controller/IMU-Moter-test.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="IMU-모터 연동실험"></div>
-    <div><img src= "/assets/img/project/Raspi-FCC-And-Controller/Drone-Present.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="졸업작품 출품"></div>
+    <div><img class="slickImg" src= "/assets/img/project/Raspi-FCC-And-Controller/fly-inside.jpg" style="width: auto; height: 500px; margin: 0 auto;" onClick="modal()" title="실내비행"></div>
+    <div><img class="slickImg" src= "/assets/img/project/Raspi-FCC-And-Controller/ctrl.jpg" style="width: auto; height: 500px; margin: 0 auto;" onClick="modal()" title="컨트롤러"></div>
+    <div><img class="slickImg" src= "/assets/img/project/Raspi-FCC-And-Controller/Dev-Env.jpg" style="width: auto; height: 500px; margin: 0 auto;" onClick="modal()" title="개발환경"></div>
+    <div><img class="slickImg" src= "/assets/img/project/Raspi-FCC-And-Controller/ESC-test.jpg" style="width: auto; height: 500px; margin: 0 auto;" onClick="modal()" title="ESC 단위실험"></div>
+    <div><img class="slickImg" src= "/assets/img/project/Raspi-FCC-And-Controller/Landing-Skid.jpg" style="width: auto; height: 500px; margin: 0 auto;" onClick="modal()" title="랜딩 스키드 제작"></div>
+    <div><img class="slickImg" src= "/assets/img/project/Raspi-FCC-And-Controller/IMU-Moter-test.jpg" style="width: auto; height: 500px; margin: 0 auto;" onClick="modal()" title="IMU-모터 연동실험"></div>
+    <div><img class="slickImg" src= "/assets/img/project/Raspi-FCC-And-Controller/Drone-Present.jpg" style="width: auto; height: 500px; margin: 0 auto;" onClick="modal()" title="졸업작품 출품"></div>
 </div>
-<script>
-    $(document).ready(function() {
-        $('.main_center').slick({
-            autoplay : true, /*자동으로 슬라이딩됨*/
-            dots : true, /* 하단 점 버튼 */
-            speed : 700 /* 이미지가 슬라이딩시 걸리는 시간 */,
-            infinite : true,
-            autoplaySpeed : 5000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */,
-            arrows : true,
-            slidesToShow : 1,
-            slidesToScroll : 1,
-            touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
-            nextArrows : true, /* 넥스트버튼 */
-            prevArrows : true,
-            arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
-            fade : false
-        });
-    });
-</script>
 
-> 졸업작품 발표를 준비하며 설계했던 **라즈베리파이를 활용한 드론설계** 프로젝트 입니다.   \
+> 졸업작품 발표를 준비하며 설계했던 **라즈베리파이를 활용한 드론설계** 프로젝트 입니다. \
 > 라즈베리파이는 각각 Controller MCU 부, 드론의 MCU 역할을 하는 FCC MCU 부에 들어갑니다. \
 > 라즈베리파이 두대는 서로 블루투스로 통신하며 조이스틱을 조작하면 컨트롤러는 FCC로 각각 해당하는 신호를 전송합니다.
 > throttle up,down 과 비상정지, Rolling과 Pitching을 제어할수있도록 설계했습니다.
@@ -79,7 +165,7 @@ categories:
 - 디지털 회로 설계 : `Drone 구동부` `컨트롤러 구동부`
 - 전자 회로 설계 : `Drone 전원부` `컨트롤러 전원`
 - 펌웨어 설계 : `RasberryPi` `FCC(Drone)` `Controller` \
-`DriverCode(BNO_055)` `DriverCode(MCP_3008)` `DriverCode(BLHeli-32)`
+  `DriverCode(BNO_055)` `DriverCode(MCP_3008)` `DriverCode(BLHeli-32)`
 - Library : `WiringPi` `pigpio` `WiringPiI2C` `wiringPiSPI` `bluetooth` `rfcomm` `socket`
 
 ## 담당 기능 (Full-Stack)
@@ -97,7 +183,24 @@ categories:
 > 하지만 막상 시작하니 **모르는게 정말많아** 필요한 공부량이 정말 많았던 프로젝트 였습니다.
 > **C언어** 조차 제대로 모르는 상황에서, **라즈베리파이**를 접하고, **드론의 비행원리**를 공부해가며,
 > 여러가지 **통신**과 **드라이버코드**, **디지털 신호제어**등을 하나씩 개발해 나갔습니다.
-> 아무런 **뼈대없이** ~~맨땅에 헤딩~~을 했던 프로젝트로 저에게 큰 **터닝포인트**가 됐던 프로젝트입니다.  \
+> 아무런 **뼈대없이** ~~맨땅에 헤딩~~을 했던 프로젝트로 저에게 큰 **터닝포인트**가 됐던 프로젝트입니다. \
 > 결국 시제품과 비슷할 정도로 **매끄러운 동작도, 제대로된 비행도 못한채로 끝났지만**,
 > **펌웨어 실력향상**이나 **개발 역량**이 크게 늘어나는 시점이 되었다고 생각합니다.
 > 이제 와서 생각해보는 것 이지만, 좀더 쉬운 방법이나 가이드라인을 따라 개발했다면.. 하는 생각을 하게됩니다. 아쉬움이 많이 남았었습니다. 다음에 꼭 다시 완성시켜보고 싶습니다.
+
+<div id="modalLayer" style="display: none">
+  <div class="modalBox">
+  <div><img class="modalImg" src= "/assets/img/project/Raspi-FCC-And-Controller/fly-inside.jpg" style="width: auto; height: auto; margin: 0 auto;" title="실내비행"></div>
+  <div><img class="modalImg" src="/assets/img/project/Raspi-FCC-And-Controller/ctrl.jpg" style="width: auto; height: auto; margin: 0 auto;" title="컨트롤러"></div>
+  <div><img class="modalImg" src= "/assets/img/project/Raspi-FCC-And-Controller/Dev-Env.jpg" style="width: auto; height: auto; margin: 0 auto;" title="개발환경"></div>
+  <div><img class="modalImg" src= "/assets/img/project/Raspi-FCC-And-Controller/ESC-test.jpg" style="width: auto; height: auto; margin: 0 auto;" title="ESC 단위실험"></div>
+  <div><img class="modalImg" src= "/assets/img/project/Raspi-FCC-And-Controller/Landing-Skid.jpg" style="width: auto; height: auto; margin: 0 auto;" title="랜딩 스키드 제작"></div>
+  <div><img class="modalImg" src= "/assets/img/project/Raspi-FCC-And-Controller/IMU-Moter-test.jpg" style="width: auto; height: auto; margin: 0 auto;" title="IMU-모터 연동실험"></div>
+  <div><img class="modalImg" src= "/assets/img/project/Raspi-FCC-And-Controller/Drone-Present.jpg" style="width: auto; height: auto; margin: 0 auto;" title="졸업작품 출품"></div>
+  </div>
+  <div class="btnBox">
+    <span id="closeButton" onClick="modClose()" style="width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white">
+      닫기
+    </span>
+  </div>
+<div>
