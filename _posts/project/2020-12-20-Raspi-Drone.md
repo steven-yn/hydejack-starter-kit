@@ -117,7 +117,7 @@ categories:
 </script>
 
 - toc
-  {:toc .large-only}
+{:toc .large-only}
 
 🔎 About 　　　　　　졸업작품 발표시 진행한 라즈베리파이를 활용한 드론설계 프로젝트 입니다. \
 　 \
