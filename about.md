@@ -239,7 +239,7 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
         <ul class="related-posts">
           <li class="h6">
             <div>
-              <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2021-11-29T00:00:00+09:00">2021.06　 2021.11</time>
+              <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-01-10T00:00:00+09:00">2022.01　 현재 진행중</time>
               <a href="#" class="flip-title">
               </a>
               <span style="margin-left: 5rem">
