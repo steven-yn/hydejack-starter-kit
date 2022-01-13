@@ -34,7 +34,7 @@ categories:
 ## Link
 
 - **[Code (github)](https://github.com/steven-yn/steven-yn.github.io)**
-- **[CHANGELOG](/changelog/)**
+- **[CHANGELOG](/CHANGELOG/)**
 
 ## Stacks
 

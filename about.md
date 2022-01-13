@@ -243,6 +243,24 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
               <a href="#" class="flip-title">
               </a>
               <span style="margin-left: 5rem">
+                <a href="https://github.com/psgstellar">PSG 팀 프로젝트 스터디 그룹</a> 가입
+              </span>
+            </div>
+          </li>
+          <li class="h6">
+            <div>
+              <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2021-06-15T00:00:00+09:00"></time>
+              <span style="margin-left: 7rem">
+                ( 현재 팀원 구성 및 개발 기획중, <a href="http://ezenconst.co.kr/Main.do">PSG Stellar</a> )
+              </span>
+            </div>
+          </li>
+          <li class="h6">
+            <div>
+              <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2021-11-29T00:00:00+09:00">2021.06　 2021.11</time>
+              <a href="#" class="flip-title">
+              </a>
+              <span style="margin-left: 5rem">
                 파이썬과 R을 활용한 빅데이터 UI 개발자
               </span>
             </div>
@@ -287,7 +305,7 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             <div>
               <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2017-09-01T00:00:00+09:00"></time>
               <span style="margin-left: 7rem">
-                ( 성적장학금 4회 , 4회중 최우수 1회, 졸업작품 : 라즈베리파이를 활용한 드론설계(자유주제) )
+                ( 성적장학금 4회 , 4회중 최우수 1회, 졸업작품 : <a href="/project/2020-12-20-Raspi-Drone">라즈베리파이를 활용한 드론설계(자유주제)</a>
               </span>
             </div>
           </li>
