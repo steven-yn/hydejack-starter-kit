@@ -164,10 +164,21 @@ categories:
 
 ## 담당 기능 (Full-Stack)
 
-- 퍼블리싱 관련 전반적인 기술 (미디어 쿼리, SEO, CSS-in-JS)
-- Rest API 설계 및 백엔드 와의 데이터 HTTP 통신
+- CSS-in-JS (@emotion/react) 를 이용하여 작업
+  + 높은 재사용성 Component 설계
+  + 시맨틱한 마크업, 반응형 UI 를 위함
 - Component (UI, Container, Redux)
-- 높은 재사용성 Component 설계
+- 비동기 작업 처리 (Redux-Saga, Axios)
+- 가능한한 UX 에 초점을 맞춘 front-end 개발
+
+## 도입 예정 Stack
+
+- 퍼블리싱 및 UI 관련 전반적인 기술 (미디어 쿼리, SEO, 크로스 브라우징)
+- 대형 트래픽 솔루션 (immer, memo, SSR...)
+- React@v18 업그레이드 예정인 Suspense 사용예정
+- Typescript 사용
+- Rest API 설계 및 백엔드 와의 데이터 HTTP 통신
+  + 집중적으로 연구 개발
 
 <div id="modalLayer" style="display: none">
 <div>
