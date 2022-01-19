@@ -382,13 +382,13 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             <ul>
               <li style="">
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: #ffdf51;"><span class="font-hl" style=" padding: 0 5px 0 7px">Javascript : <span class="barper">40</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: #ffdf51;"><span class="font-hl" style=" padding: 0 5px 0 7px">Javascript : <span class="barper">55</span>%</span></div>
                 </div>
               </li>
 
               <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: skyblue;"><span class="font-hl" style="color: white; padding: 0 5px 0 5px">HTML / CSS : <span class="barper">50</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: skyblue;"><span class="font-hl" style="color: white; padding: 0 5px 0 5px">HTML / CSS : <span class="barper">70</span>%</span></div>
                 </div>
               </li>
 
@@ -417,13 +417,13 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             <ul>
               <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: #4ee0f3;"><span class="font-hl" style="color: white">React : <span class="barper">40</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: #4ee0f3;"><span class="font-hl" style="color: white">React : <span class="barper">45</span>%</span></div>
                 </div>
               </li>
 
               <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: limegreen;"><span class="font-hl" style="color: white">Node.js : <span class="barper">20</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: limegreen;"><span class="font-hl" style="color: white">Node.js : <span class="barper">35</span>%</span></div>
                 </div>
               </li>
             </ul>
