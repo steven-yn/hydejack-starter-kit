@@ -237,6 +237,42 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             현재
         </h2>
         <ul class="related-posts">
+        <li class="h6">
+          <div>
+            <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00">2022.02　 현재 진행중</time>
+            <a href="#" class="flip-title">
+            </a>
+            <span style="margin-left: 5rem">
+               Petbook 기획 단계
+            </span>
+          </div>
+        </li>
+        <li class="h6">
+          <div>
+            <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00"></time>
+            <span style="margin-left: 7rem">
+              ( 백엔드 6, 프론트엔드 4 )
+            </span>
+          </div>
+        </li>
+        <li class="h6">
+          <div>
+            <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00">2022.02　 현재 진행중</time>
+            <a href="#" class="flip-title">
+            </a>
+            <span style="margin-left: 5rem">
+              <a href="https://www.notion.so/755285fd98fd427a81e5ce70c826e8a0?v=3e73d2f5dca942f89d4ea8e350a8d8ed">공식 홈페이지</a> 기획 마무리 단계
+            </span>
+          </div>
+        </li>
+        <li class="h6">
+          <div>
+            <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00"></time>
+            <span style="margin-left: 7rem">
+              ( 백엔드 6, 프론트엔드 5, 현재 프론트엔드 팀장역할 수행 )
+            </span>
+          </div>
+        </li>
           <li class="h6">
             <div>
               <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-01-10T00:00:00+09:00">2022.01　 현재 진행중</time>
@@ -251,7 +287,7 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             <div>
               <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2021-06-15T00:00:00+09:00"></time>
               <span style="margin-left: 7rem">
-                ( 현재 팀원 구성 및 개발 기획중, <a href="http://ezenconst.co.kr/Main.do">PSG Stellar</a> )
+                ( 프로젝트 2개 진행중, 전체 팀원 24명 )
               </span>
             </div>
           </li>

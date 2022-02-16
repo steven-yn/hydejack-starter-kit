@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Place-n-Piece (현재 진행중)
+title: Place-n-Piece (보류)
 description: >
-  Place-n-Piece (현재 진행중)
+  Place-n-Piece (보류)
 sitemap: false
 hide_last_modified: false
 categories:
   - project
 ---
 
-# Place n Piece (현재 진행중)
+# Place n Piece (보류)
 
 <style>
 
@@ -116,11 +116,11 @@ categories:
 </script>
 
 - toc
-{:toc .large-only}
+  {:toc .large-only}
 
 🔎 About 　　　　　　실제 장소(카페, 전망 좋은 위치 등)를 Web-App 으로 구현하여 가상 장소를 제공
 　　　　　　　　　　 하고 그날의 기분, 일기, 방명록, 유저 커뮤니케이션 등의 컨텐츠를 제공하여 가상
-　　　　　　　　　　 장소를 실제로 방문한듯한 User Experience 를 서비스 하는 메타버스 플랫폼  \
+　　　　　　　　　　 장소를 실제로 방문한듯한 User Experience 를 서비스 하는 메타버스 플랫폼 \
 　 \
 📅 프로젝트 기간 　　 &nbsp;2021/01/11 ~ 진행중 \
 　 \
@@ -138,10 +138,10 @@ categories:
 
 ## Content
 
-> 현재 개발중에 있으며, 빠른 시일내에 Example Project 형태로 배포할 계획입니다.   \
-> **User Communication** 형성과 좋은 **User Experience** 를 경험하도록 개발하고 싶습니다.   \
-> 리액트를 다루는 기술 ( 김민준 / velopert 저 ) 에서 만드는 Blog Project 에서 나만의 프로젝트로 특색있게 만들고자 생각 하다가 떠오른 아이디어 에서 출발한 프로젝트 입니다.    \
-> 자세한 기획 내용에 관심이 생기셨다면 **[노션 링크](https://www.notion.so/f52736647b8741328d8194ce78fade7a)**를 확인해주시기 바랍니다.    \
+> 현재 개발중에 있으며, 빠른 시일내에 Example Project 형태로 배포할 계획입니다. \
+> **User Communication** 형성과 좋은 **User Experience** 를 경험하도록 개발하고 싶습니다. \
+> 리액트를 다루는 기술 ( 김민준 / velopert 저 ) 에서 만드는 Blog Project 에서 나만의 프로젝트로 특색있게 만들고자 생각 하다가 떠오른 아이디어 에서 출발한 프로젝트 입니다. \
+> 자세한 기획 내용에 관심이 생기셨다면 **[노션 링크](https://www.notion.so/f52736647b8741328d8194ce78fade7a)**를 확인해주시기 바랍니다. \
 > 또한 가능한 선에서 최신 기법으로 개발하려고 노력하고 있습니다.
 
 ## Link
@@ -165,8 +165,8 @@ categories:
 ## 담당 기능 (Full-Stack)
 
 - CSS-in-JS (@emotion/react) 를 이용하여 작업
-  + 높은 재사용성 Component 설계
-  + 시맨틱한 마크업, 반응형 UI 를 위함
+  - 높은 재사용성 Component 설계
+  - 시맨틱한 마크업, 반응형 UI 를 위함
 - Component (UI, Container, Redux)
 - 비동기 작업 처리 (Redux-Saga, Axios)
 - 가능한한 UX 에 초점을 맞춘 front-end 개발
@@ -178,7 +178,7 @@ categories:
 - React@v18 업그레이드 예정인 Suspense 사용예정
 - Typescript 사용
 - Rest API 설계 및 백엔드 와의 데이터 HTTP 통신
-  + 집중적으로 연구 개발
+  - 집중적으로 연구 개발
 
 <div id="modalLayer" style="display: none">
 <div>
