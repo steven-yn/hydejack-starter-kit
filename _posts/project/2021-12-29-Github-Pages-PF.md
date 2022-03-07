@@ -9,7 +9,7 @@ categories:
   - project
 ---
 
-# 개인 포트폴리오 사이트 with Github-Pages
+# 개인 포트폴리오 사이트 with Jekyll-Theme
 
 - toc
 {:toc .large-only}

@@ -243,7 +243,7 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             <a href="#" class="flip-title">
             </a>
             <span style="margin-left: 5rem">
-               Petbook 기획 단계
+               petBook 개발중
             </span>
           </div>
         </li>
@@ -251,17 +251,18 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
           <div>
             <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00"></time>
             <span style="margin-left: 7rem">
-              ( 백엔드 6, 프론트엔드 4 )
+              ( 총원 8, 백엔드 4, 프론트엔드 5 )
             </span>
           </div>
         </li>
+
         <li class="h6">
           <div>
             <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00">2022.02　 현재 진행중</time>
             <a href="#" class="flip-title">
             </a>
             <span style="margin-left: 5rem">
-              <a href="https://www.notion.so/755285fd98fd427a81e5ce70c826e8a0?v=3e73d2f5dca942f89d4ea8e350a8d8ed">공식 홈페이지</a> 기획 마무리 단계
+              <a href="https://www.notion.so/755285fd98fd427a81e5ce70c826e8a0?v=3e73d2f5dca942f89d4ea8e350a8d8ed">공식 홈페이지</a> 개발중
             </span>
           </div>
         </li>
@@ -269,10 +270,29 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
           <div>
             <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00"></time>
             <span style="margin-left: 7rem">
-              ( 백엔드 6, 프론트엔드 5, 현재 프론트엔드 팀장역할 수행 )
+              ( 총원 9, 백엔드 6, 프론트엔드 4, FE Team Reader )
             </span>
           </div>
         </li>
+        <li class="h6">
+          <div>
+            <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-01-20T00:00:00+09:00">2022.01　 2022.02</time>
+            <a href="#" class="flip-title">
+            </a>
+            <span style="margin-left: 5rem">
+               바닐라 자바스크립트 모던 프레임워크 게시판 개발
+            </span>
+          </div>
+        </li>
+        <li class="h6">
+          <div>
+            <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-01T00:00:00+09:00"></time>
+            <span style="margin-left: 7rem">
+              ( ZUM Internet 과제전형, 합격 )
+            </span>
+          </div>
+        </li>
+
           <li class="h6">
             <div>
               <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-01-10T00:00:00+09:00">2022.01　 현재 진행중</time>
@@ -287,7 +307,7 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             <div>
               <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2021-06-15T00:00:00+09:00"></time>
               <span style="margin-left: 7rem">
-                ( 프로젝트 2개 진행중, 전체 팀원 24명 )
+                ( 프로젝트 3개 진행중, 전체 팀원 22명 )
               </span>
             </div>
           </li>
@@ -414,29 +434,29 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
       <blockquote>
         <ul>
           <li>
-            <strong>Language</strong> : <code class="language-plaintext highlighter-rouge">Javascript</code>, <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>, <code class="language-plaintext highlighter-rouge">C</code>, <code class="language-plaintext highlighter-rouge">VHDL</code>
+            <strong>Language</strong> : <code class="language-plaintext highlighter-rouge">Javascript</code>, <code class="language-plaintext highlighter-rouge">Typescript</code>, <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>, <code class="language-plaintext highlighter-rouge">C</code>
             <ul>
-              <li style="">
+              <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: #ffdf51;"><span class="font-hl" style=" padding: 0 5px 0 7px">Javascript : <span class="barper">55</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: #ffdf51;"><span class="font-hl" style="color: #333333; padding: 0 5px 0 7px; ">Javascript : <span class="barper">70</span>%</span></div>
                 </div>
               </li>
 
               <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: skyblue;"><span class="font-hl" style="color: white; padding: 0 5px 0 5px">HTML / CSS : <span class="barper">70</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: #74c0fc;"><span class="font-hl" style="color: #ffffff; padding: 0 5px 0 7px">Typescript : <span class="barper">25</span>%</span></div>
+                </div>
+              </li>
+
+              <li>
+                <div class="bar-container">
+                  <div id="Content_bar" class="bar" style="background-color: skyblue;"><span class="font-hl" style="color: white; padding: 0 5px 0 5px">HTML / CSS : <span class="barper">75</span>%</span></div>
                 </div>
               </li>
 
               <li>
                 <div class="bar-container">
                   <div id="Content_bar" class="bar" style="background-color: #9a2ace;"><span class="font-hl" style="color: white">C : <span class="barper">50</span>%</span></div>
-                </div>
-              </li>
-
-              <li>
-                <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: darkblue;"><span class="font-hl" style="color: white">VHDL : <span class="barper">35</span>%</span></div>
                 </div>
               </li>
             </ul>
@@ -453,7 +473,7 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
             <ul>
               <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: #4ee0f3;"><span class="font-hl" style="color: white">React : <span class="barper">45</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: #4ee0f3;"><span class="font-hl" style="color: white">React : <span class="barper">50</span>%</span></div>
                 </div>
               </li>
 
@@ -472,17 +492,17 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
       <blockquote>
         <ul>
           <li>
-            <strong>Library</strong> : <code class="language-plaintext highlighter-rouge">Redux</code>, <code class="language-plaintext highlighter-rouge">JQuery</code>
+            <strong>Library</strong> : <code class="language-plaintext highlighter-rouge">Redux</code>, <code class="language-plaintext highlighter-rouge">React-Query</code>
             <ul>
               <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: mediumpurple;"><span class="font-hl" style="color: white">Redux : <span class="barper">35</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: mediumpurple;"><span class="font-hl" style="color: white">Redux : <span class="barper">40</span>%</span></div>
                 </div>
               </li>
 
               <li>
                 <div class="bar-container">
-                  <div id="Content_bar" class="bar" style="background-color: sienna;"><span class="font-hl" style="color: white;  padding: 0 5px 0 7px">JQuery : <span class="barper">25</span>%</span></div>
+                  <div id="Content_bar" class="bar" style="background-color: #FF4154;"><span class="font-hl" style="color: white;  padding: 0 5px 0 7px">React-Query : <span class="barper">25</span>%</span></div>
                 </div>
               </li>
             </ul>
@@ -495,7 +515,12 @@ _만약 PDF로 이 페이지를 보고 계시다면, \
       <blockquote>
         <ul>
           <li>
-            <strong>Software / OS</strong> : <code class="language-plaintext highlighter-rouge">Git</code>, <code class="language-plaintext highlighter-rouge">Linux</code>, <code class="language-plaintext highlighter-rouge">AWS-EC2</code>
+            <strong>Software / OS</strong> : <code class="language-plaintext highlighter-rouge">GitHub</code>, <code class="language-plaintext highlighter-rouge">Linux</code>, <code class="language-plaintext highlighter-rouge">AWS-EC2</code>
+            <code class="language-plaintext highlighter-rouge">Yarn 3 PnP</code>
+            <code class="language-plaintext highlighter-rouge">Webpack</code>
+            <code class="language-plaintext highlighter-rouge">Babel</code>
+            <code class="language-plaintext highlighter-rouge">Github Pages</code>
+            <code class="language-plaintext highlighter-rouge">Heroku</code>
           </li>
         </ul>
       </blockquote>

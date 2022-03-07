@@ -10,8 +10,8 @@ author1:
   about: |
     안녕하세요 !      \
     <span style="color: darkorange">새로운 것을 찾아 항해하고 끝까지 포기하지 않는</span>      \
-    개발자 <span style="color: teal">**윤성연**</span>
-     입니다.
+    개발자 <span style="color: teal">**윤성연**</span> 입니다.  \
+    더 좋은 웹을 만들어 나가기 위해 노력 하겠습니다.
 
     <span style="color: gray"> 혹시라도 저에게 조금 관심이 생기셨다면, [Résumé](/assets/me/Résumé.pdf) 를 확인하시고 <br>
     연락 주신다면 정말 감사드리겠습니다 ! </span>
@@ -20,20 +20,29 @@ author1:
     닉네임 : 윤바다 (yoonOcean)     \
     E-mail : steven_yoon1009@naver.com
 
+    More Info
+
     * <a href="https://steven-yn.github.io" style="color: skyblue"> 포트폴리오 (현재사이트) <a />
     * <a href="https://github.com/steven-yn" style="color: skyblue"> GitHub <a />
     * <a href="https://yoonocean.tistory.com/" style="color: skyblue"> Blog <a />
+    * <a href="https://boulder-grouse-005.notion.site/yoonOcean-Dev-Log-fad49379d7db4a118e025b4c73f52d9d" style="color: skyblue"> Notion <a />
+    * <a href="https://www.notion.so/Project-cdd4db87d6ac40ec85ad049694bf85e5" style="color: skyblue"> PSG Team Project Study Group Notion <a />
+    * <a href="https://github.com/psgstellar" style="color: skyblue"> PSG Team Project Study Group Github <a />
+
+    Present Publishing Site
+
     * <a href="http://3.143.160.44:4000/" style="color: skyblue"> React Blog Project <a />
+    * <a href="https://steven-yn.github.io/OceanVue-VanilaJS-Framework/" style="color: skyblue"> OceanVue <a />
 
     *프론트엔드 개발자 구직중*
 
   # This photo will be used in the about section
   picture:
-    path: /assets/me/me.jpg
+    path: /assets/me/me2.jpg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x: /assets/me/me.jpg
-      2x: /assets/me/me.jpg
+      1x: /assets/me/me2.jpg
+      2x: /assets/me/me2.jpg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
