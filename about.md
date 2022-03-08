@@ -104,31 +104,11 @@ hide_description: true
       }
     })
 
-    if (barElems[0].style.opacity === "1") {
-
-      barElems[0].addEventListener('transitionstart', move);
-      function move() {
-        bbarElems.forEach(eelem => {
-          if (eelem.style.width < "2%") {
-            let width = 1;
-            let sum = 1;
-
-            var id = setInterval(frame, 10);
-            const barper = eelem.querySelector(".barper").innerText;
-            function frame() {
-              if (width >= 99) {
-                  clearInterval(id);
-              } else {
-                  width++;
-                  const perwidth = barper / 100;
-                  sum += perwidth;
-                  eelem.style.width = sum +'%';
-              }
-            }
-          }
-        })
-      }
-    }
+    
+    bbarElems.forEach(eelem => {
+      const barper = eelem.querySelector(".barper").innerText;
+      eelem.style.width = barper +'%';
+    })
   }
 
   window.addEventListener('scroll', handleScroll);
