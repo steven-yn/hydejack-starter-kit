@@ -1,0 +1,2143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>윤성연</title>
+    <description>프론트엔드 개발자 윤성연 포트폴리오 사이트
+</description>
+    <link>https://steven-yn.github.io/</link>
+    <atom:link href="https://steven-yn.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 10 Mar 2022 15:01:12 +0900</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2022 15:01:12 +0900</lastBuildDate>
+    <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>petBook</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#담당-기능&quot; id=&quot;markdown-toc-담당-기능&quot;&gt;담당 기능&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　소외된 동물들을 위한 집사들의 커뮤니티 &amp;amp; 포털 사이트  &lt;br /&gt;
+　　　　　　　　　　   주변의 소동물 친구찾기, 소동물 펫시팅 노하우, &lt;br /&gt;
+　　　　　　　　　　  주변 소동물이 이용가능한 병원정보, 분양정보 등을 제공 하는 플랫폼&lt;/p&gt;
+
+&lt;p&gt;📅 프로젝트 기간 　　  2021/02/20 ~ 진행중 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 총원 8, BE 4, FE 5 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 담당 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Front-End&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;🏢 활동 소속　　　　   PSG&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;petBook 은 강아지, 고양이 를 제외한 소외된 반려동물들을 위한 공간입니다. &lt;br /&gt;
+소동물 들을 키우시는 분들이 사이트에서 유용한 정보를 같이 공유하고 이야기 하며, &lt;br /&gt;
+주변의 소동물이 진료 받을수 있는 동물 병원, 분양 정보를 제공 하려고 합니다.  &lt;br /&gt;
+협업 프로젝트 관리는 Jira 와 &lt;strong&gt;&lt;a href=&quot;https://github.com/psgstellar/petBook/projects/1&quot;&gt;깃헙 프로젝트&lt;/a&gt;&lt;/strong&gt; 를 통해 관리하고 있습니다.  &lt;br /&gt;
+추후 권한 설정이 되면 Figma 링크를 첨부하도록 하겠습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/psgstellar/petBook/tree/fe&quot;&gt;FE Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://boulder-grouse-005.notion.site/React-set-feat-yarn-3-x-TDD-1-154d828368044688b0b19ae7b2177eaa&quot;&gt;협업을 위한 프로세스 및 React 개발환경 set ( feat. yarn 3.x &amp;amp; TDD ) - (1)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;준비중&lt;/p&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+&lt;p&gt;　　　　　　　　　　　&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Framework : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React(FE)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Spring Boot(BE)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js(Dev Server)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Library : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React-Query&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux-thunk&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux-saga&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Axios&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@testing-library&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enzyme&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styled-components&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@mui&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yarn 3 PnP&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Babel&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Main Language : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Javascript&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Typescript&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;담당-기능&quot;&gt;담당 기능&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;yarn 3.x PnP + CRA + Typescript + Redux + Jest 를 이용한 개발환경 CI 작업&lt;/li&gt;
+  &lt;li&gt;병원 정보 page 구현 예정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 20 Feb 2022 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2022-02-20-petBook/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2022-02-20-petBook/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>OceanVue</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#담당-기능-full-stack&quot; id=&quot;markdown-toc-담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　ZUM 과제전형을 하며 제작한 커스텀 바닐라 JS 프레임워크 게시판 입니다 &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/01/17 ~ 2021/02/14 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 개인 프로젝트 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 담당 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VanilaJS&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash Routing&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Flux Pattern&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VirtualDOM&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fetch API&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DIFF Algorithm&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;API Cashing&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;None DB&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Webpack&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Babel&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rest API&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/OceanVue/mainPage.PNG&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;메인(포스트 목록) 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/OceanVue/Pagenation.PNG&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;작성일, 페이지네이션&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/OceanVue/authorFilter.PNG&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;작성자별&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/OceanVue/search.PNG&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;검색&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/OceanVue/postViewer.PNG&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;포스트 한개보기 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/OceanVue/writeUpdatePage.PNG&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;작성 수정 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;ZUM 1차 과제 전형&lt;/strong&gt;을 하며 제작한 &lt;mark&gt;커스텀 프레임워크&lt;/mark&gt; 입니다.
+&lt;strong&gt;React&lt;/strong&gt;와 &lt;strong&gt;Redux&lt;/strong&gt;를 모티브로 제작하였습니다.
+직접 개발한 커스텀 프레임워크로 간단한 게시판이 구현되어 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/OceanVue-VanilaJS-Framework&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://steven-yn.github.io/OceanVue-VanilaJS-Framework/&quot;&gt;Zum-Board&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Backend : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;API Cashing&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rest API&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Frontend : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VanilaJS&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Component&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash Routing&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Flux Pattern&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VirtualDOM&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DIFF Algorithm&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fetch API&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;API Cashing&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yarn&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Webpack&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Babel&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Database : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON File&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Server Hosting : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Heroku&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Backend : Node.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;None-DB REST API, CRUD Server
+Data 저장은 JSON 파일에 저장.
+API 캐싱 적용&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OceanVue &lt;em&gt;(Vanila JS Custom Framework)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;(&lt;del&gt;사실 React에 더 가까우나 yoonOcean에 맞는 별칭을 지어주고 싶었습니다 😅&lt;/del&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;React 와 Redux 를 모티브로 프레임워크를 제작&lt;/li&gt;
+    &lt;li&gt;Fetch API 를 통한 서버 연동&lt;/li&gt;
+    &lt;li&gt;Hash 방식 SPA Routing&lt;/li&gt;
+    &lt;li&gt;esm 모듈 적용&lt;/li&gt;
+    &lt;li&gt;babel 을 통해 jsx 문법을 적용시켜 가상 DOM 생성&lt;/li&gt;
+    &lt;li&gt;가상 DOM 을 통한 렌더링&lt;/li&gt;
+    &lt;li&gt;새로운 가상 DOM 이 렌더링 될시 변경된 부분만 렌더링 (DIFF 알고리즘 적용)&lt;/li&gt;
+    &lt;li&gt;단방향 데이터 흐름 Flux Pattern 형식의 상태 관리&lt;/li&gt;
+    &lt;li&gt;부분적으로 이벤트 위임을 사용하여 이벤트 처리&lt;/li&gt;
+    &lt;li&gt;Core 인 Component 정의 에서는 생성자 함수와 prototype 메서드를 통한 entry 에 종속적인 구조.&lt;/li&gt;
+    &lt;li&gt;webpack 을 통한 js 파일과 css 파일 번들링, build 를 통한 index.html 에서 bundle.js 파일 하나로 실행됩니다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frontend : 게시판 Zum-Board 구현&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;페이지네이션, 작성일 기준 오름/내림차순, 작성자 클릭시 해당 작성자 기준, 검색 기능 등의 정렬 필터링 구현.&lt;/li&gt;
+    &lt;li&gt;페이지 이동간 새로고침 발생하지 않고, routes 배열에 등록된 컴포넌트 실행.&lt;/li&gt;
+    &lt;li&gt;실제 DOM 렌더링후 컴포넌트들 재실행을 통해 엘리먼트 취득 및 이벤트 리스너 추가&lt;/li&gt;
+    &lt;li&gt;useEffect 와 비슷하게 엘리먼트가 마운트 된후 작동하는 hook 구현&lt;/li&gt;
+    &lt;li&gt;store 에서 상태 변화를 감지하면 자동으로 렌더링 되도록 구현&lt;/li&gt;
+    &lt;li&gt;서버 데이터 API 캐싱 적용하여 스택에 저장되고 store에 들어가도록 구현&lt;/li&gt;
+    &lt;li&gt;POST, DELETE, UPDATE API 및 새로고침 버튼 클릭시 데이터 갱신&lt;/li&gt;
+    &lt;li&gt;수정, 새글 작성하기 완료후 자동으로 작성한 게시물로 이동&lt;/li&gt;
+    &lt;li&gt;404 에러에 대해 UI 처리, 500 에러등은 alert 으로 에러메시지 띄우기&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;구현할게 너무나도 많고, 처음 해보는 내용이 많아서 많은 공을 들여 진행했던 프로젝트 입니다.. &lt;br /&gt;
+힘든만큼 얻어가는 내용이 많았던 과제 전형이었습니다. &lt;br /&gt;
+특히 &lt;strong&gt;webpack 과 babel&lt;/strong&gt; 의 역할을 정확히 알지 못했었는데, 이번 기회를 통해 무슨 역할을 하는지 정확히 알수 있었습니다. &lt;br /&gt;
+또한 &lt;strong&gt;Core&lt;/strong&gt; 를 구현할때는 타인 코드를 참고하면서 할수 밖에 없었는데요, &lt;br /&gt;
+참고한 내용을 &lt;strong&gt;저에게 맞게 변형&lt;/strong&gt;시키는 작업을 하면서 이렇게 생각할수도 있구나 하는 경험을 많이 얻었던것 같습니다. &lt;br /&gt;
+백엔드를 직접 간단하게 구상하고, 이를 Fetch API 를 통해 가져오는 작업을 하면서도  &lt;br /&gt;
+서버와 클라이언트간 HTTP 통신 이해도도 많이 늘었다고 생각합니다.  &lt;br /&gt;
+게시물 정렬 작업 (필터링) 할때는 직접 알고리즘을 구상한것이 많았는데,  &lt;br /&gt;
+특히 페이지네이션 기능구현할때는 2차원 배열로 구현했던게 인상깊게 기억이 납니다. &lt;br /&gt;
+저의 역량이 많이 늘어나는 과제였던것 같습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+  &lt;div class=&quot;modalBox&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/OceanVue/mainPage.PNG&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;메인(포스트 목록) 페이지&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/OceanVue/Pagenation.PNG&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;작성일, 페이지네이션&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/OceanVue/authorFilter.PNG&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;작성자별&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/OceanVue/search.PNG&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;검색&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/OceanVue/postViewer.PNG&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;포스트 한개보기 페이지&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/OceanVue/writeUpdatePage.PNG&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;작성 수정 페이지&quot; /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btnBox&quot;&gt;
+    &lt;span id=&quot;closeButton&quot; onclick=&quot;modClose()&quot; style=&quot;width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white&quot;&gt;
+      닫기
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 14 Feb 2022 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2022-02-14-Ocean-Vue/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2022-02-14-Ocean-Vue/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Hyades - PSG 팀 공식 홈페이지</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#담당-기능&quot; id=&quot;markdown-toc-담당-기능&quot;&gt;담당 기능&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　PSG 팀 의 공식 홈페이지  &lt;br /&gt;
+　　　　　　　　　　  진행중인 프로젝트 와 PSG 팀원을 소개 &lt;br /&gt;
+　　　　　　　　　　  추후 깃헙 API 와 연동하여 노션과 같은 프로젝트 관리 기능을 도입할 예정&lt;/p&gt;
+
+&lt;p&gt;📅 프로젝트 기간 　　  2021/02/06 ~ 진행중 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 총원 9, BE 5, FE 4 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 담당 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Front-End Team Reader&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;🏢 활동 소속　　　　   PSG&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;팀 프로젝트 스터디 그룹 PSG 를 소개하는 공식 홈페이지 입니다. &lt;br /&gt;
+현재 진행중인 프로젝트와 그룹내 팀원을 소개하는 사이트를 제작하려고 하고있으며,  &lt;br /&gt;
+추후 깃헙 이슈, 프로젝트 같은 API 와 연동하여 프로젝트 관리 기능을 도입할 예정입니다.  &lt;br /&gt;
+자세한 내용에 관심이 생기셨다면 &lt;strong&gt;&lt;a href=&quot;https://www.notion.so/The-Hyades-Project-def28feb04af4ae3978ef52278c35b87&quot;&gt;노션 링크&lt;/a&gt;&lt;/strong&gt;를 확인해주시기 바랍니다.  &lt;br /&gt;
+협업 프로젝트 관리는 &lt;strong&gt;&lt;a href=&quot;https://www.notion.so/6f5d36f3014c4220964e72cbbde9b030?v=f08a307ea4fa44adb9dc9ae9b17239db&quot;&gt;노션 로드맵&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&quot;https://github.com/psgstellar/Hyades/projects/1&quot;&gt;깃헙 프로젝트&lt;/a&gt;&lt;/strong&gt; 를 통해 관리하고 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/psgstellar/Hyades/tree/fe&quot;&gt;FE Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://boulder-grouse-005.notion.site/React-set-feat-yarn-3-x-TDD-1-154d828368044688b0b19ae7b2177eaa&quot;&gt;협업을 위한 프로세스 및 React 개발환경 set ( feat. yarn 3.x &amp;amp; TDD ) - (1)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;준비중&lt;/p&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+&lt;p&gt;　　　　　　　　　　　&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Framework : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React(FE)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Spring Boot(BE)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js(Dev Server)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Library : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React-Query&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux-thunk&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux-saga&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Axios&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@testing-library&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enzyme&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styled-components&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@mui&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yarn 3 PnP&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Babel&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Main Language : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Javascript&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Typescript&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;담당-기능&quot;&gt;담당 기능&lt;/h2&gt;
+
+&lt;p&gt;현재 프론트엔드 팀장 역할을 수행하고 있으며, &lt;br /&gt;
+매 스프린트 마다 팀원 분들께 담당할 에픽과 태스크를 분배해 드리고 있습니다. &lt;br /&gt;
+주로 저는 공통 컴포넌트나 로그인 같은 전역적인 상태관리 로직을 작성할 계획입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;yarn 3.x PnP + CRA + Typescript + Redux + Jest 를 이용한 개발환경 CI 작업&lt;/li&gt;
+  &lt;li&gt;로그인 기능, 공통 컴포넌트, 마이페이지 구현 개발 예정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 06 Feb 2022 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2022-02-06-Hyades/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2022-02-06-Hyades/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Place n Piece (보류)</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;toc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　실제 장소(카페, 전망 좋은 위치 등)를 Web-App 으로 구현하여 가상 장소를 제공
+　　　　　　　　　　 하고 그날의 기분, 일기, 방명록, 유저 커뮤니케이션 등의 컨텐츠를 제공하여 가상
+　　　　　　　　　　 장소를 실제로 방문한듯한 User Experience 를 서비스 하는 메타버스 플랫폼 &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/01/11 ~ 진행중 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 개인 프로젝트, 추후 팀원 모집 계획중 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 담당 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux&lt;/code&gt; &lt;br /&gt;
+ &lt;br /&gt;
+🏢 활동 소속　　　　   프로젝트인원 모집 계획중&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;현재 개발중에 있으며, 빠른 시일내에 Example Project 형태로 배포할 계획입니다. &lt;br /&gt;
+&lt;strong&gt;User Communication&lt;/strong&gt; 형성과 좋은 &lt;strong&gt;User Experience&lt;/strong&gt; 를 경험하도록 개발하고 싶습니다. &lt;br /&gt;
+리액트를 다루는 기술 ( 김민준 / velopert 저 ) 에서 만드는 Blog Project 에서 나만의 프로젝트로 특색있게 만들고자 생각 하다가 떠오른 아이디어 에서 출발한 프로젝트 입니다. &lt;br /&gt;
+자세한 기획 내용에 관심이 생기셨다면 &lt;strong&gt;&lt;a href=&quot;https://www.notion.so/f52736647b8741328d8194ce78fade7a&quot;&gt;노션 링크&lt;/a&gt;&lt;/strong&gt;를 확인해주시기 바랍니다. &lt;br /&gt;
+또한 가능한 선에서 최신 기법으로 개발하려고 노력하고 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/Place-n-Piece&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.notion.so/f52736647b8741328d8194ce78fade7a&quot;&gt;노션&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;준비중&lt;/p&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Framework : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React(FE)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js(BE)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Library : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux(Saga)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@emotion/react&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Babel&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Axios&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Koa&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongoose&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bcrypt&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JWT&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yarn&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Database : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MongoDB&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Server Hosting : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS EC2&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Main Language : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Javascript&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CSS-in-JS (@emotion/react) 를 이용하여 작업
+    &lt;ul&gt;
+      &lt;li&gt;높은 재사용성 Component 설계&lt;/li&gt;
+      &lt;li&gt;시맨틱한 마크업, 반응형 UI 를 위함&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Component (UI, Container, Redux)&lt;/li&gt;
+  &lt;li&gt;비동기 작업 처리 (Redux-Saga, Axios)&lt;/li&gt;
+  &lt;li&gt;가능한한 UX 에 초점을 맞춘 front-end 개발&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;도입-예정-stack&quot;&gt;도입 예정 Stack&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;퍼블리싱 및 UI 관련 전반적인 기술 (미디어 쿼리, SEO, 크로스 브라우징)&lt;/li&gt;
+  &lt;li&gt;대형 트래픽 솔루션 (immer, memo, SSR…)&lt;/li&gt;
+  &lt;li&gt;React@v18 업그레이드 예정인 Suspense 사용예정&lt;/li&gt;
+  &lt;li&gt;Typescript 사용&lt;/li&gt;
+  &lt;li&gt;Rest API 설계 및 백엔드 와의 데이터 HTTP 통신
+    &lt;ul&gt;
+      &lt;li&gt;집중적으로 연구 개발&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 11 Jan 2022 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2022-01-11-Place-n-Piece/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2022-01-11-Place-n-Piece/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>개인 포트폴리오 사이트 with Jekyll-Theme</title>
+        <description>&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　지킬 테마를 사용한 Github Pages 포트폴리오 사이트 입니다. &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/12/20 ~ 2021/12/29 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 개인 사이드 프로젝트 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 사용 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-theme&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github-Pages&lt;/code&gt;  &lt;br /&gt;
+  &lt;br /&gt;
+🏢 활동 소속　　　　  PROJECT LION 의 면접관이 좋아하는 Git Portfolio 만들기 　　　　　　　　　　 (with_GitBlog) 강의&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;mark&gt;이 사이트&lt;/mark&gt; 는 저의 &lt;strong&gt;소개&lt;/strong&gt; 및 &lt;strong&gt;개발 History&lt;/strong&gt; 등을 남기는 공간 입니다.  &lt;br /&gt;
+&lt;strong&gt;프론트사이드&lt;/strong&gt; 만 개발하여 백엔드가 없는 &lt;strong&gt;정적 웹사이트&lt;/strong&gt; 입니다.  &lt;br /&gt;
+&lt;strong&gt;utterances&lt;/strong&gt; 를 통하여 깃허브에 로그인을 하면 댓글을 작성할수 있습니다.  &lt;br /&gt;
+게시물들은 &lt;strong&gt;마크다운 파일&lt;/strong&gt;로 작성합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/steven-yn.github.io&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/CHANGELOG/&quot;&gt;CHANGELOG&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;API : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;utterances&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hits&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Analtics&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundler&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sass&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SEO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Ruby&lt;/strong&gt; 기반의 프론트사이드 사이트를 처음 접해봤습니다. &lt;br /&gt;
+&lt;strong&gt;jekyll 테마&lt;/strong&gt;를 사용해서 사이트를 빠르게 구축할수 있었습니다.  &lt;br /&gt;
+또한 다양한 &lt;strong&gt;플러그인&lt;/strong&gt; 들이 지원되서, 페이지에 부가기능 또한 빠르게 개발할수 있었습니다. &lt;br /&gt;
+&lt;strong&gt;utterances, Hits, Google Analtics&lt;/strong&gt; 등 외부 API 와 연결하는 작업도 좋은 경험 이었습니다.  &lt;br /&gt;
+모든 게시물을 마크다운 으로 작성하다보니, 마크다운 작성 능력도 올릴수 있었습니다.  &lt;br /&gt;
+계속 운영하면서 사이트의 인터랙티브함을 좀더 업그레이드 하며 다른 스택을 접목할 계획입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Wed, 29 Dec 2021 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2021-12-29-Github-Pages-PF/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2021-12-29-Github-Pages-PF/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>웹디자인기능사</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　 HTML, CSS, jQuery 로 이루어진 퍼블리싱 역량을 확인하는 시험입니다. &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/10/22 ~ 2021/12/13 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 개인 자격증 시험 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 사용 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML5&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSS3&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jQuery&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Crafter/layout.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;레이아웃 잡기&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Crafter/slideImg.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;메인 슬라이드 배너&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Crafter/slideMenu.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;슬라이드형 메뉴&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Crafter/modal.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;모달&quot; /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    $(document).ready(function() {
+        $(&apos;.main_center&apos;).slick({
+            autoplay : true, /*자동으로 슬라이딩됨*/
+            dots : true, /* 하단 점 버튼 */
+            speed : 700 /* 이미지가 슬라이딩시 걸리는 시간 */,
+            infinite : true,
+            autoplaySpeed : 5000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */,
+            arrows : true,
+            slidesToShow : 1,
+            slidesToScroll : 1,
+            touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+            nextArrows : true, /* 넥스트버튼 */
+            prevArrows : true,
+            arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+            fade : false
+        });
+    });
+&lt;/script&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;웹디자인 기능사 실기 준비시 공개문제를 연습했던 프로젝트들 입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/Web-Design-Crafter&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;준비중&lt;/p&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Library : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jQuery&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;퍼블리싱에 대한 이해도가 전혀 없었을때 공부했던 내용입니다.
+시험을 준비하면서 html 요소나 css 스타일링을 해보면서 퍼블리싱 숙련도를 올렸습니다.
+또한 jQuery를 다루면서 dom 을 쉽게 접근해서 동적인 페이지를 제작할수 있었습니다.
+저에게는 프론트엔드에 입문하게 해준 첫 프로젝트 라고 할수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+  &lt;div class=&quot;modalBox&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Crafter/layout.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;레이아웃 잡기&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Crafter/slideImg.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;메인 슬라이드 배너&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Crafter/slideMenu.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;슬라이드형 메뉴&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Crafter/modal.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;모달&quot; /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btnBox&quot;&gt;
+    &lt;span id=&quot;closeButton&quot; onclick=&quot;modClose()&quot; style=&quot;width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white&quot;&gt;
+      닫기
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 13 Dec 2021 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2021-12-13-Web-Design-Crafter/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2021-12-13-Web-Design-Crafter/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Relog</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#담당-기능-full-stack&quot; id=&quot;markdown-toc-담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　블로그 서비스 &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/11/3 ~ 2021/11/29 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 Full-Stack 1명, Front-End 1명 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 담당 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Koa&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RestAPI&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS EC2&lt;/code&gt; &lt;br /&gt;
+ &lt;br /&gt;
+🏢 활동 소속　　　　  안산 이젠아카데미 (국비지원)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Relog/mainPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;메인(포스트 목록) 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Relog/postviewerPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;포스트 한개 보기&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Relog/writePage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;새 글 작성하기&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Relog/adminPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;관리자 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;국비지원 수업&lt;/strong&gt; 을 들으며 수강 종료하기전 프로젝트 제출때 만든 &lt;strong&gt;블로그 사이트&lt;/strong&gt; 입니다. &lt;br /&gt;
+&lt;mark&gt;Relog&lt;/mark&gt; 는 게시물에 집중할수 있는 &lt;strong&gt;심플한 뷰&lt;/strong&gt; 가 특징인 블로그 입니다. &lt;br /&gt;
+기본적으로 메인 페이지에서 &lt;strong&gt;유저들이 작성&lt;/strong&gt;한 포스트들을 보고, &lt;strong&gt;해시태그&lt;/strong&gt;가 같은 게시물이 존재하면 해당 태그의 게시물을 &lt;strong&gt;모아서 볼수 있으며&lt;/strong&gt;, 누구나 쉽게 가입할수 있습니다. &lt;br /&gt;
+유저들은 가입시 관리자의 &lt;strong&gt;승인&lt;/strong&gt;을 받아야 글을 작성할수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/Blog-Project-Working&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://3.143.160.44:4000/&quot;&gt;Relog 사이트&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;위의 Relog 사이트 링크로 이동하셔서 &lt;strong&gt;사이트 이용&lt;/strong&gt;이 가능합니다. &lt;br /&gt;
+사이트 관리자인 &lt;strong&gt;admin&lt;/strong&gt; 과 몇개의 &lt;strong&gt;test 유저&lt;/strong&gt;가 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;관리자 &lt;br /&gt;
+&lt;strong&gt;ID&lt;/strong&gt; : admin &lt;br /&gt;
+&lt;strong&gt;PW&lt;/strong&gt; : 123456
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;test 유저1 &lt;br /&gt;
+&lt;strong&gt;ID&lt;/strong&gt; : steven &lt;br /&gt;
+&lt;strong&gt;PW&lt;/strong&gt; : 1234
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;test 유저2 &lt;br /&gt;
+&lt;strong&gt;ID&lt;/strong&gt; : yoon &lt;br /&gt;
+&lt;strong&gt;PW&lt;/strong&gt; : 1234&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;사이트 관리자는 클라이언트의 &lt;strong&gt;새 글쓰기 승인&lt;/strong&gt; 기능만 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Framework : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React(FE)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js(BE)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Library : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Redux(Saga)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Styled-Componets&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;M-UI&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Babel&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Axios&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Koa&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongoose&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bcrypt&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JWT&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yarn&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Database : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MongoDB&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Server Hosting : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS EC2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;백엔드 RestAPI 설계&lt;/li&gt;
+  &lt;li&gt;Axios 로 RestAPI 연동하여 Front &amp;lt;-&amp;gt; Back 데이터 연동&lt;/li&gt;
+  &lt;li&gt;Redux 로 state 처리 및 Redux-Saga 이용한 비동기 작업처리&lt;/li&gt;
+  &lt;li&gt;전달 받은 state 사용하여 container component 에서 마운트 처리&lt;/li&gt;
+  &lt;li&gt;DOM 조작 및 UI 핸들링&lt;/li&gt;
+  &lt;li&gt;어색한 &lt;strong&gt;UI 스타일링&lt;/strong&gt; 조정&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;관리자 페이지&lt;/strong&gt; UI, State 처리, 유저정보 호출&lt;/li&gt;
+  &lt;li&gt;AWS-EC2 &lt;strong&gt;nginx&lt;/strong&gt; 와 &lt;strong&gt;PM2&lt;/strong&gt; 로 배포&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;프론트엔드 개발을 &lt;strong&gt;처음 시작&lt;/strong&gt;해봤었던 프로젝트 입니다 &lt;br /&gt;
+바닐라 JS 나 다른 프레임워크 등의 작업을 해보지 않고 &lt;strong&gt;리액트로 첫 시작&lt;/strong&gt;을 했습니다. &lt;br /&gt;
+개발 당시 부딪히는 점이 많아서 대부분 책의 내용을 참고하였는데요 &lt;br /&gt;
+(&lt;strong&gt;리액트를 다루는 기술(개정판)&lt;/strong&gt; / 김민준(velopert) 저) &lt;br /&gt;
+오히려 Start를 리액트로 시작해서 프론트엔드가 &lt;strong&gt;추구하는 방향&lt;/strong&gt;이 무엇인지 깨닫는 프로젝트 였습니다. &lt;br /&gt;
+좀더 &lt;strong&gt;빠른 렌더링&lt;/strong&gt;, 사용자 &lt;strong&gt;친화적인 UI&lt;/strong&gt;, &lt;br /&gt;
+&lt;strong&gt;클라이언트의 입력부터 서버의 출력&lt;/strong&gt;까지의 &lt;strong&gt;데이터 관리&lt;/strong&gt;에 대해 이해할수 있었습니다. &lt;br /&gt;
+또한 책에서 안내하는 블로그 사이트의 기초적인 뼈대를 작성한후 &lt;strong&gt;관리자 페이지&lt;/strong&gt;를 직접 개발해 보았습니다. &lt;br /&gt;
+현재는 단순하게 프론트엔드 에서 관리자가 승인시 &lt;strong&gt;state 로만 허가&lt;/strong&gt;되어 &lt;br /&gt;
+&lt;strong&gt;페이지를 나가거나&lt;/strong&gt; 창을 &lt;strong&gt;새로고침 (F5)&lt;/strong&gt; 를 하게되면 승인 정보가 &lt;strong&gt;사라지게&lt;/strong&gt; 됩니다. &lt;br /&gt;
+추후 &lt;strong&gt;DB에 POST&lt;/strong&gt;해서 &lt;strong&gt;승인정보를 GET&lt;/strong&gt; 할수 있도록 개발할 예정입니다. &lt;br /&gt;
+또한 다양한 API를 연동해볼 생각입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+  &lt;div class=&quot;modalBox&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Relog/mainPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;메인(포스트 목록) 페이지&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Relog/postviewerPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;포스트 한개 보기&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Relog/writePage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;새 글 작성하기&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Relog/adminPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;관리자 페이지&quot; /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btnBox&quot;&gt;
+    &lt;span id=&quot;closeButton&quot; onclick=&quot;modClose()&quot; style=&quot;width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white&quot;&gt;
+      닫기
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 29 Nov 2021 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2021-11-29-Relog/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2021-11-29-Relog/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>News-Viewer with React</title>
+        <description>&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　리액트로 개발한 News를 불러오고 볼수있는 어플리케이션 입니다. &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/10/30 ~ 2021/11/2 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 개인 사이드 프로젝트 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 사용 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react-router-dom&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Axios&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Custom-Hooks&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Styled-Componets&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/News-Viewer/mainPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;메인(전체보기) 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/News-Viewer/waitPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;대기 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/News-Viewer/sportsPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;스포츠 카테고리&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/News-Viewer/newsPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;뉴스 클릭시 이동&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;mark&gt;News-Viewer&lt;/mark&gt; 는 뉴스 API 를 받아와 렌더링하는 어플리케이션 입니다. &lt;br /&gt;
+기본적으로 메인 페이지에서 카테고리에 상관없이 &lt;strong&gt;전체보기&lt;/strong&gt; 로 뉴스를 보고, &lt;strong&gt;카테고리&lt;/strong&gt;에 따라 관련 기사들을 볼수 있으며, 기사를 클릭하면 해당 기사를 발행한 신문사 사이트로 이동합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/News-Viewer-React&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;준비중
+(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newsapi.org&lt;/code&gt; 의 가격정책이 바뀐 이유로 브라우저로 바로 호출 할수 없게 됐습니다.)&lt;/p&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Framework : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React(FE)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Library : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Styled-Componets&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Axios&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Custom Component&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react-router-dom&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yarn&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;외부 API&lt;/strong&gt; 를 가져와 사용하는것을 처음 해본 프로젝트 입니다.     &lt;br /&gt;
+&lt;strong&gt;JSON 형태&lt;/strong&gt;로 뉴스 정보를 받아와서 UI를 구성하고 데이터를 출력하는 형태입니다.      &lt;br /&gt;
+API 호출 뿐만 아니라, &lt;strong&gt;router&lt;/strong&gt; 와 호출시 발생하는 지연을 처리하는 &lt;strong&gt;비동기 상태관리&lt;/strong&gt;에 대해서도      &lt;br /&gt;
+이해도를 높일수 있었습니다. 또한 주된 작업은 이런 데이터를 받아와서 &lt;strong&gt;렌더링&lt;/strong&gt; 하는것임을 파악      &lt;br /&gt;
+할 수 있던 사이드 프로젝트 였습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+  &lt;div class=&quot;modalBox&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/News-Viewer/mainPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;메인(전체보기) 페이지&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/News-Viewer/waitPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;대기 페이지&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/News-Viewer/sportsPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;스포츠 카테고리&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/News-Viewer/newsPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;뉴스 클릭시 이동&quot; /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btnBox&quot;&gt;
+    &lt;span id=&quot;closeButton&quot; onclick=&quot;modClose()&quot; style=&quot;width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white&quot;&gt;
+      닫기
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Thu, 04 Nov 2021 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2021-11-04-News-Viewer/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2021-11-04-News-Viewer/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Todo-App with React</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#demo&quot; id=&quot;markdown-toc-demo&quot;&gt;Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　리액트로 개발한 일정 관리 어플리케이션 입니다. &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/10/26 ~ 2021/10/28 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 개인 사이드 프로젝트 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 사용 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react-router-dom&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Axios&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Custom-Hooks&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Styled-Componets&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Todo-App/mainPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;메인 페이지&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Todo-App/checkPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;체크 및 삭제&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Todo-App/writebfPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;일정 추가&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Todo-App/writeafPage.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; title=&quot;추가 버튼 클릭후&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;mark&gt;Todo-App&lt;/mark&gt; 은 일정을 추가하고, 체크하고, 삭제할수 있는 어플리케이션 입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/Todo-App-React&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://steven-yn.github.io/Todo-App-React/&quot;&gt;Todo-App&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Framework : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React(FE)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Package : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yarn&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hooks&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;React.memo&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react-virtualized&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;리액트&lt;/strong&gt; 를 사용해 처음 해본 프로젝트 입니다.     &lt;br /&gt;
+&lt;strong&gt;Item-List&lt;/strong&gt; 형태의 어플리케이션으로 구조화 되어있습니다.      &lt;br /&gt;
+&lt;strong&gt;map, useReducer, useCallback, 이벤트 핸들러&lt;/strong&gt; 등으로 이루어져 있는데,     &lt;br /&gt;
+이와같은 방법을 실습해볼수 있던 사이드 프로젝트 였습니다.      &lt;br /&gt;
+또한 &lt;strong&gt;대량의 데이터&lt;/strong&gt;를 &lt;strong&gt;프론트&lt;/strong&gt;에서 다루게 될때 어떤식으로 접근해야 하는가 파악할수 있던 프로젝트 였습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+  &lt;div class=&quot;modalBox&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Todo-App/mainPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;메인 페이지&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Todo-App/checkPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;체크 및 삭제&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Todo-App/writebfPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;일정 추가&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Todo-App/writeafPage.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;추가 버튼 클릭후&quot; /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btnBox&quot;&gt;
+    &lt;span id=&quot;closeButton&quot; onclick=&quot;modClose()&quot; style=&quot;width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white&quot;&gt;
+      닫기
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Thu, 28 Oct 2021 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2021-10-28-Todo-App/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2021-10-28-Todo-App/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>K-HUMS 국방과제</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+    $(document).ready(function() {
+        $(&apos;.main_center&apos;).slick({
+            autoplay : true, /*자동으로 슬라이딩됨*/
+            dots : true, /* 하단 점 버튼 */
+            speed : 700 /* 이미지가 슬라이딩시 걸리는 시간 */,
+            infinite : true,
+            autoplaySpeed : 5000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */,
+            arrows : true,
+            slidesToShow : 1,
+            slidesToScroll : 1,
+            touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+            nextArrows : true, /* 넥스트버튼 */
+            prevArrows : true,
+            arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+            fade : false
+        });
+    });
+
+    function modal () {
+      const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+      const modBox = document.querySelector(&quot;.modalBox&quot;);
+      const modImg = document.querySelector(&quot;.modalImg&quot;);
+      modLayerElem.style.display = &quot;block&quot;;
+
+      $(function(){
+        $(&apos;.modalBox&apos;).slick({
+        autoplay : false, /*자동으로 슬라이딩됨*/
+        dots : true, /* 하단 점 버튼 */
+        speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+        infinite : true,
+        autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+        arrows : true,
+        slidesToShow : 1,
+        slidesToScroll : 1,
+        touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+        nextArrows : true, /* 넥스트버튼 */
+        prevArrows : true,
+        arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+        fade : false
+        });
+      });
+    };
+
+    function modClose () {
+      const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+      modLayerElem.style.display = &quot;none&quot;;
+    }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#담당-기능-full-stack&quot; id=&quot;markdown-toc-담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　근무기간 동안 참여한 KHUMS 국가과제 입니다. &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/02/03 ~ 2020/4/30 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　프로젝트 총괄 1명, FPGA 코딩 및 하드웨어 1명 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 담당 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FPGA&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Platform Designer&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NIOS II&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Driver&lt;/code&gt; &lt;br /&gt;
+ &lt;br /&gt;
+🏢 활동 소속　　　　  네오헬스테크널러지 (NHT)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/KHUMS/HUMS.jpg&quot; style=&quot;width: auto; height: 400px; margin: 0 auto;&quot; title=&quot;HUMS 개요&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/KHUMS/VHDL.jpg&quot; style=&quot;width: auto; height: 400px; margin: 0 auto;&quot; title=&quot;Quartus VHDL&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/KHUMS/Pin-Assign.jpg&quot; style=&quot;width: auto; height: 400px; margin: 0 auto;&quot; title=&quot;FPGA Pin Assign&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/KHUMS/Plat-Desi.jpg&quot; style=&quot;width: auto; height: 400px; margin: 0 auto;&quot; title=&quot;플랫폼 디자이너 환경&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/KHUMS/NIOS-II-firm.jpg&quot; style=&quot;width: auto; height: 400px; margin: 0 auto;&quot; title=&quot;NIOS-II 환경&quot; onclick=&quot;modal()&quot; /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;mark&gt; 위 이미지는 실제 프로젝트 참여 이미지가 아닌 참고용 이미지 임을 알립니다. &lt;/mark&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;mark&gt;KHUMS&lt;/mark&gt; 국가과제는 헬기에 탑재되는 항공기상태감시시스템 ( HUMS ) 국산화 프로젝트 입니다. &lt;br /&gt;
+HUMS 에 들어가는 SRU 중, DPU 와 APU 개발 파트 였습니다. &lt;br /&gt;
+DPU 는 디지털 신호처리를, APU 는 아날로그 신호 처리를 담당합니다. &lt;br /&gt;
+자세한 내용은 국방과제 이므로 비공개 보안 사항 입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;FPGA : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cyclone V&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;OS : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NIOS II&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SRAM&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DDR3&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Flash Memory&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ADC&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PCIe&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RS485&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SPI&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift Register&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MCU 의 역할을 할수 있도록 FPGA 를 설계. (Main Board, Core)&lt;/li&gt;
+  &lt;li&gt;FPGA 에서 NIOS II가 구동될수 있도록 Platform Designer 설계&lt;/li&gt;
+  &lt;li&gt;각 하드웨어 들이 작동하는지 NIOS 및 Quartus 상에서 디버깅, 검증&lt;/li&gt;
+  &lt;li&gt;잘못된 회로나 FPGA Pin Assignment 검증&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;졸업 하기 2주전쯤 입사하고, 입사 하자마자 &lt;strong&gt;바로 투입&lt;/strong&gt;됐던 프로젝트 입니다. &lt;br /&gt;
+개발에 바로 투입되기에는 실력이 많이 모자랐지만, 실무에 참여해보고 싶었던 참이라 공부 해가며 개발했었습니다. &lt;br /&gt;
+&lt;strong&gt;ASIC 용 칩 설계&lt;/strong&gt;에만 사용되는줄 알았던 FPGA 로 &lt;strong&gt;MCU와 같은 역할&lt;/strong&gt;을 하도록 설계 하는 업무가 주됬었습니다. &lt;br /&gt;
+&lt;strong&gt;Memory 칩 들을 Assign&lt;/strong&gt; 하는 작업이나, &lt;strong&gt;ADC 칩을 Spec 에 맞게 Assign&lt;/strong&gt; 하는 작업들을 하면서 컴퓨터 구조에 대해 좀더 깊이 이해하게 되었고, 이를 &lt;strong&gt;가상 OS인 NIOS&lt;/strong&gt; 에 올려 MCU 로써 작동하는 것을 경험 했습니다. &lt;br /&gt;
+NIOS 에서 C 언어로 된 &lt;strong&gt;펌웨어 코드&lt;/strong&gt;들을 보면서 &lt;strong&gt;구조를 파악&lt;/strong&gt;하는데 시간을 많이 들였는데, 생각보다 훨씬 &lt;strong&gt;깊고 C 로 구조화 된 펌웨어&lt;/strong&gt;를 처음 봐서 많이 헤맸던 기억이 납니다. &lt;br /&gt;
+당시 프로젝트를 진행하기엔 실력이 너무 부족했고, 이런것들을 배울기회는 너무 적고 혼자 공부하고있던 입장이었는데, 현재의 웹 개발 시장처럼 &lt;strong&gt;정보공유 문화&lt;/strong&gt;가 부족한 분야라고 많이 느꼇습니다. 그래서 퇴사후 &lt;strong&gt;웹 개발&lt;/strong&gt;을 시작하게된 계기가 됐습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+  &lt;div class=&quot;modalBox&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/KHUMS/HUMS.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;HUMS 개요&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/KHUMS/VHDL.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;Quartus VHDL&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/KHUMS/Pin-Assign.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;FPGA Pin Assign&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/KHUMS/Plat-Desi.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;플랫폼 디자이너 환경&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/KHUMS/NIOS-II-firm.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;NIOS-II 환경&quot; /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btnBox&quot;&gt;
+    &lt;span id=&quot;closeButton&quot; onclick=&quot;modClose()&quot; style=&quot;width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white&quot;&gt;
+      닫기
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 30 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2021-04-30-K-HUMS-DAPU/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2021-04-30-K-HUMS-DAPU/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>RasberryPi-Drone</title>
+        <description>&lt;style&gt;
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: 81%;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+  max-height: 750px;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+    $(&apos;.main_center&apos;).slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    const modBox = document.querySelector(&quot;.modalBox&quot;);
+    const modImg = document.querySelector(&quot;.modalImg&quot;);
+    modLayerElem.style.display = &quot;block&quot;;
+
+    $(function(){
+      $(&apos;.modalBox&apos;).slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector(&quot;#modalLayer&quot;);
+    modLayerElem.style.display = &quot;none&quot;;
+  }
+&lt;/script&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#content&quot; id=&quot;markdown-toc-content&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#link&quot; id=&quot;markdown-toc-link&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#record&quot; id=&quot;markdown-toc-record&quot;&gt;Record&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#담당-기능-full-stack&quot; id=&quot;markdown-toc-담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#개발당시-느낀점들&quot; id=&quot;markdown-toc-개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;🔎 About 　　　　　　졸업작품 발표시 진행한 라즈베리파이를 활용한 드론설계 프로젝트 입니다. &lt;br /&gt;
+　 &lt;br /&gt;
+📅 프로젝트 기간 　　  2021/1/30 ~ 2020/12/20 &lt;br /&gt;
+　 &lt;br /&gt;
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　개발 및 설계 1명, 설계 및 문서작업 1명 &lt;br /&gt;
+　 &lt;br /&gt;
+💡 담당 Stack 　　　　 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;디지털 회로 설계&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;드론 비행 설계&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;펌웨어 설계&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; &lt;br /&gt;
+ &lt;br /&gt;
+🏢 활동 소속　　　　  청주대학교&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;div class=&quot;main_center&quot;&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/fly-inside.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;실내비행&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/ctrl.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;컨트롤러&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/Dev-Env.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;개발환경&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/ESC-test.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;ESC 단위실험&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/Landing-Skid.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;랜딩 스키드 제작&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/IMU-Moter-test.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;IMU-모터 연동실험&quot; /&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;img class=&quot;slickImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/Drone-Present.jpg&quot; style=&quot;width: auto; height: 500px; margin: 0 auto;&quot; onclick=&quot;modal()&quot; title=&quot;졸업작품 출품&quot; /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;졸업작품 발표를 준비하며 설계했던 &lt;strong&gt;라즈베리파이를 활용한 드론설계&lt;/strong&gt; 프로젝트 입니다. &lt;br /&gt;
+라즈베리파이는 각각 Controller MCU 부, 드론의 MCU 역할을 하는 FCC MCU 부에 들어갑니다. &lt;br /&gt;
+라즈베리파이 두대는 서로 블루투스로 통신하며 조이스틱을 조작하면 컨트롤러는 FCC로 각각 해당하는 신호를 전송합니다.
+throttle up,down 과 비상정지, Rolling과 Pitching을 제어할수있도록 설계했습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/steven-yn/Raspi-FCC-And-Controller&quot;&gt;Code (github)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;record&quot;&gt;Record&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/project/Raspi-FCC-And-Controller/fly-inside-vd.gif&quot; style=&quot;width: 600px; height: 500px; margin: 0 auto;&quot; title=&quot;실내비행&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/project/Raspi-FCC-And-Controller/IMU-Moter-test-vd.gif&quot; style=&quot;width:600px; height: 500px; margin: 0 auto;&quot; title=&quot;IMU 단위실험&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/project/Raspi-FCC-And-Controller/fly-outside-night.gif&quot; style=&quot;width:300px; height: 500px; margin: 0 auto;&quot; title=&quot;첫 야외비행&quot; /&gt; &lt;img src=&quot;/assets/img/project/Raspi-FCC-And-Controller/fly-outside-high.gif&quot; style=&quot;width:300px; height: 500px; margin: 0 auto;&quot; title=&quot;좀더 나아졌지만 실패..&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;stacks&quot;&gt;Stacks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;디지털 회로 설계 : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Drone 구동부&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;컨트롤러 구동부&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;전자 회로 설계 : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Drone 전원부&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;컨트롤러 전원&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;펌웨어 설계 : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RasberryPi&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FCC(Drone)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Controller&lt;/code&gt; &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DriverCode(BNO_055)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DriverCode(MCP_3008)&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DriverCode(BLHeli-32)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Library : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WiringPi&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pigpio&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WiringPiI2C&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wiringPiSPI&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bluetooth&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rfcomm&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;socket&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;담당-기능-full-stack&quot;&gt;담당 기능 (Full-Stack)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;드론 비행 원리와 그에 맞는 출력을 낼수있는 추력설계, 비행설계(Pitching, Rolling, Yawing)&lt;/li&gt;
+  &lt;li&gt;각 모듈들과 MCU 처럼 사용하는 RasberryPi 간 DriverCode 설계, 디지털 회로 설계&lt;/li&gt;
+  &lt;li&gt;각 DriverCode 를 이용해 RasberryPi 에서 C언어로 펌웨어 설계&lt;/li&gt;
+  &lt;li&gt;ESC PWM, SPI 통신, I2C 통신, Serial 통신, Parallel 통신, 블루투스 소켓통신 펌웨어 설계&lt;/li&gt;
+  &lt;li&gt;전원부 전압 강하 및 전류 안정 회로 설계&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;개발당시-느낀점들&quot;&gt;개발당시 느낀점들&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;제가 코딩을 해서 &lt;strong&gt;프로젝트&lt;/strong&gt; 라는것을 처음 진행해본 프로젝트 였습니다.
+당시 배우던 전공인 전자회로와 마이크로프로세서 에서 배운 &lt;strong&gt;전공지식&lt;/strong&gt;을 가지고 시작했습니다.
+하지만 막상 시작하니 &lt;strong&gt;모르는게 정말많아&lt;/strong&gt; 필요한 공부량이 정말 많았던 프로젝트 였습니다.
+&lt;strong&gt;C언어&lt;/strong&gt; 조차 제대로 모르는 상황에서, &lt;strong&gt;라즈베리파이&lt;/strong&gt;를 접하고, &lt;strong&gt;드론의 비행원리&lt;/strong&gt;를 공부해가며,
+여러가지 &lt;strong&gt;통신&lt;/strong&gt;과 &lt;strong&gt;드라이버코드&lt;/strong&gt;, &lt;strong&gt;디지털 신호제어&lt;/strong&gt;등을 하나씩 개발해 나갔습니다.
+아무런 &lt;strong&gt;뼈대없이&lt;/strong&gt; &lt;del&gt;맨땅에 헤딩&lt;/del&gt;을 했던 프로젝트로 저에게 큰 &lt;strong&gt;터닝포인트&lt;/strong&gt;가 됐던 프로젝트입니다. &lt;br /&gt;
+결국 시제품과 비슷할 정도로 &lt;strong&gt;매끄러운 동작도, 제대로된 비행도 못한채로 끝났지만&lt;/strong&gt;,
+&lt;strong&gt;펌웨어 실력향상&lt;/strong&gt;이나 &lt;strong&gt;개발 역량&lt;/strong&gt;이 크게 늘어나는 시점이 되었다고 생각합니다.
+이제 와서 생각해보는 것 이지만, 좀더 쉬운 방법이나 가이드라인을 따라 개발했다면.. 하는 생각을 하게됩니다. 아쉬움이 많이 남았었습니다. 다음에 꼭 다시 완성시켜보고 싶습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;modalLayer&quot; style=&quot;display: none&quot;&gt;
+  &lt;div class=&quot;modalBox&quot;&gt;
+  &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/fly-inside.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;실내비행&quot; /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/ctrl.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;컨트롤러&quot; /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/Dev-Env.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;개발환경&quot; /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/ESC-test.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;ESC 단위실험&quot; /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/Landing-Skid.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;랜딩 스키드 제작&quot; /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/IMU-Moter-test.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;IMU-모터 연동실험&quot; /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img class=&quot;modalImg&quot; src=&quot;/assets/img/project/Raspi-FCC-And-Controller/Drone-Present.jpg&quot; style=&quot;width: auto; height: auto; margin: 0 auto;&quot; title=&quot;졸업작품 출품&quot; /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btnBox&quot;&gt;
+    &lt;span id=&quot;closeButton&quot; onclick=&quot;modClose()&quot; style=&quot;width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white&quot;&gt;
+      닫기
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 20 Dec 2020 00:00:00 +0900</pubDate>
+        <link>https://steven-yn.github.io/project/2020-12-20-Raspi-Drone/</link>
+        <guid isPermaLink="true">https://steven-yn.github.io/project/2020-12-20-Raspi-Drone/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+  </channel>
+</rss>

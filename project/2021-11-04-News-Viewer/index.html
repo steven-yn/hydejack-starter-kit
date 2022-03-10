@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="ko"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>News-Viewer with React | 윤성연</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="News-Viewer with React" />
+<meta name="author" content="SungYeon Yoon" />
+<meta property="og:locale" content="ko_KR, en_US" />
+<meta name="description" content="프론트엔드 개발자 윤성연 포트폴리오 사이트" />
+<meta property="og:description" content="프론트엔드 개발자 윤성연 포트폴리오 사이트" />
+<link rel="canonical" href="https://steven-yn.github.io/project/2021-11-04-News-Viewer/" />
+<meta property="og:url" content="https://steven-yn.github.io/project/2021-11-04-News-Viewer/" />
+<meta property="og:site_name" content="윤성연" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-04T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="News-Viewer with React" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://steven-yn.github.io/assets/me/me.jpg"},"name":"SungYeon Yoon"},"headline":"News-Viewer with React","dateModified":"2022-01-09T19:19:47+09:00","datePublished":"2021-11-04T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://steven-yn.github.io/project/2021-11-04-News-Viewer/"},"author":{"@type":"Person","name":"SungYeon Yoon"},"url":"https://steven-yn.github.io/project/2021-11-04-News-Viewer/","@type":"BlogPosting","description":"프론트엔드 개발자 윤성연 포트폴리오 사이트","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="Web,Front-end,JavaScript,WebPublishing">
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="윤성연">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="윤성연">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="https://steven-yn.github.io/project/2021-11-04-News-Viewer/" hreflang="ko-kr, en-us">
+
+<link type="application/atom+xml" rel="alternate" href="https://steven-yn.github.io/feed.xml" title="윤성연" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-03-10T15:01:12+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<link rel="icon" href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/apple-icon-180x180.png">
+
+<!-- for my toc affix -->
+<script type="module">
+    document.querySelector('hy-push-state').addEventListener('load', () => {
+      let tocElement = document.getElementById("markdown-toc");
+  
+      if(tocElement){
+        let affixedDiv = document.createElement("div");
+        affixedDiv.style.position = "relative";
+        affixedDiv.style.top = "-1rem";
+        tocElement.parentNode.insertBefore(affixedDiv, tocElement);
+  
+        let headerList = document.getElementsByClassName("permalink");
+        if(headerList){
+          let prevElement;
+          window.addEventListener("scroll", () => {
+            let hurdleTop = affixedDiv.getBoundingClientRect().top;
+            if(hurdleTop <= 0) tocElement.classList.add("affix");
+            else tocElement.classList.remove("affix");
+  
+            for(let i=0;i<headerList.length;i++){
+              if(headerList[i].getBoundingClientRect().top >= 0){
+                prevElement?.style.removeProperty("font-weight");
+                let tocId = "markdown-toc-" + headerList[i].parentNode.id;
+                prevElement = document.getElementById(tocId);
+                prevElement.style.fontWeight = "bold";;
+  
+                break;
+              }
+            }
+          });
+        }
+      }
+    });
+  </script>
+  
+  <script type="module">
+    let p;
+    const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
+    const loadJS = promisify(window.loadJS);
+    document.querySelector('hy-push-state').addEventListener('load', () => {
+      const io = new IntersectionObserver(async (entries) => {
+        if (entries.some(x => x.isIntersecting)) {
+          p = p || loadJS('https://gumroad.com/js/gumroad-embed.js');
+          await p;
+          if (!window.GumroadEmbed) {
+            await new Promise(function check1(res) {
+              if ('createGumroadEmbed' in window) res(window.createGumroadEmbed());
+              else setTimeout(() => check1(res), 200);
+            });
+          }
+          await new Promise(function check2(res) {
+            if ('GumroadEmbed' in window) res(GumroadEmbed.reload());
+            else setTimeout(() => check2(res), 200);
+          });
+        }
+      }, { rootMargin: '1440px' });
+      document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el));
+    });
+  </script>
+  <script type="module">
+    let p;
+    const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
+    const loadJS = promisify(window.loadJS);
+    document.querySelector('hy-push-state').addEventListener('load', () => {
+      const io = new IntersectionObserver(async (entries) => {
+        if (entries.some(x => x.isIntersecting)) {
+          p = p || loadJS('https://gumroad.com/js/gumroad.js');
+          await p;
+          if (!window.GumroadOverlay) {
+            await new Promise(function check(res) {
+              if ('createGumroadOverlay' in window) res(window.createGumroadOverlay());
+              else setTimeout(() => check(res), 200);
+            });
+          }
+        }
+      }, { rootMargin: '300px' });
+      document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el));
+    });
+  </script>
+
+<!-- tipuesearch -->
+<link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+<script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="/assets/tipuesearch/tipuesearch.min.js"></script>
+
+<!--slick-->
+<link rel="stylesheet" type="text/css" href="/assets/css/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/slick/slick-theme.css"/>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/assets/css/slick/slick.min.js"></script>
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <!--상단메뉴바-->
+<div id="_navbar" class="navbar fixed-top">
+    <div class="content">
+        <span class="sr-only">Jump to:</span>
+        <div class="nav-btn-bar">
+            <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+                <span class="sr-only">Navigation</span>
+                <span class="icon-menu"></span>
+            </a>
+            <!--상단메뉴 카테고리들 -->
+            <div class="top-menu">
+                
+                
+                
+                <a id="_drawer--opened"  href="/about/" class="nav-btn top-menu " >
+                    About
+                </a>
+                
+                
+                <a  href="/project/" class="nav-btn top-menu " >
+                    Project
+                </a>
+                
+                
+                <a  href="/CHANGELOG/" class="nav-btn top-menu " >
+                    CHANGELOG
+                </a>
+                
+                
+            </div>
+            <!--검색 tipuesearch -->
+            <div class="nav-span">
+                <form action="/search">
+                    <div class="tipue_search_left">
+                        <img src="/assets/tipuesearch/search.png" class="tipue_search_icon">
+                    </div>
+                    <div class="tipue_search_right">
+                        <input type="text" name="q" id="tipue_search_input" pattern=".{1,}" title="At least 1 characters" required></div>
+                    <div style="clear: both;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="sr-only" hidden />
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/project/">project</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2021-11-04-News-Viewer</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+<article id="post-project-News-Viewer" class="page post mb6" role="article">
+  <header>
+    <!--제목-->
+    <h1 class="post-title flip-project-title">
+      
+        News-Viewer with React
+      
+    </h1>
+    <!--부제목-->
+    <h2 class="post-title flip-project-shubtitle">
+      
+        
+      
+    </h2>
+    <!--카테고리-->
+    <div class="post-date">
+       
+       
+      
+      
+    
+    <span class="ellipis mrl">
+      
+
+
+
+
+
+
+
+
+
+카테고리 : <a href="/project/" class="flip-title">Project</a>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+      <!--년월일-->
+      <br>
+      
+      <time datetime="2021-11-04T00:00:00+09:00">2021년 11월 04일</time>
+    </span>
+    <br>
+    </div>
+    
+    
+
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+   
+    <div style="text-align:right; text-align: center">
+        <a href="https://hits.seeyoufarm.com/https://steven-yn.github.io/project/2021-11-04-News-Viewer/" target="_blank">
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://steven-yn.github.io/project/2021-11-04-News-Viewer/&count_bg=%233D96C8&title_bg=%23715D7C&icon=smugmug.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false" /> 
+        </a>
+    </div>
+
+  </header>
+  <div class="markdown-body">
+  
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#content" id="markdown-toc-content">Content</a></li>
+  <li><a href="#link" id="markdown-toc-link">Link</a></li>
+  <li><a href="#demo" id="markdown-toc-demo">Demo</a></li>
+  <li><a href="#stacks" id="markdown-toc-stacks">Stacks</a></li>
+  <li><a href="#개발당시-느낀점들" id="markdown-toc-개발당시-느낀점들">개발당시 느낀점들</a></li>
+</ul>
+
+<p>🔎 About 　　　　　　리액트로 개발한 News를 불러오고 볼수있는 어플리케이션 입니다. <br />
+　 <br />
+📅 프로젝트 기간 　　  2021/10/30 ~ 2021/11/2 <br />
+　 <br />
+👨🏽‍🤝‍👨🏻 팀원　　　　　　　 개인 사이드 프로젝트 <br />
+　 <br />
+💡 사용 Stack 　　　　 <code class="language-plaintext highlighter-rouge">React</code> <code class="language-plaintext highlighter-rouge">react-router-dom</code> <code class="language-plaintext highlighter-rouge">Axios</code> <code class="language-plaintext highlighter-rouge">Custom-Hooks</code> <code class="language-plaintext highlighter-rouge">Styled-Componets</code></p>
+
+<hr />
+
+<h2 id="content">Content</h2>
+
+<style>
+
+#modalLayer {
+  z-index: 500;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modalBox {
+  width: 81%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  left: 7.5%;
+  top: 0;
+  position: sticky;
+  margin: 0;
+  margin-top: 1.5%
+}
+
+.modalImg {
+  display: block;
+}
+
+.btnBox {
+  position: relative;
+  left: 7.5%;
+  width: 81%;
+  height: auto;
+}
+
+#closeButton {
+  display: block;
+  float: right;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+}
+
+.slickImg:hover {
+  cursor: -webkit-zoom-in;
+}
+
+.modalImg:hover {
+  cursor: grabbing;
+}
+
+</style>
+
+<script>
+  $(document).ready(function() {
+    $('.main_center').slick({
+      autoplay : true, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : false, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+    });
+  });
+
+  function modal () {
+    const modLayerElem = document.querySelector("#modalLayer");
+    const modBox = document.querySelector(".modalBox");
+    const modImg = document.querySelector(".modalImg");
+    modLayerElem.style.display = "block";
+
+    $(function(){
+      $('.modalBox').slick({
+      autoplay : false, /*자동으로 슬라이딩됨*/
+      dots : true, /* 하단 점 버튼 */
+      speed : 700, /* 이미지가 슬라이딩시 걸리는 시간 */
+      infinite : true,
+      autoplaySpeed : 5000, /* 이미지가 다른 이미지로 넘어 갈때의 텀 */
+      arrows : true,
+      slidesToShow : 1,
+      slidesToScroll : 1,
+      touchMove : true, /* 마우스 클릭으로 끌어서 슬라이딩 가능여부 */
+      nextArrows : true, /* 넥스트버튼 */
+      prevArrows : true,
+      arrow : true, /*false면 좌우 버튼 없음, true면 좌우 버튼 보임*/
+      fade : false
+      });
+    });
+  };
+
+  function modClose () {
+    const modLayerElem = document.querySelector("#modalLayer");
+    modLayerElem.style.display = "none";
+  }
+</script>
+
+<div class="main_center">
+    <div><img class="slickImg" src="/assets/img/project/News-Viewer/mainPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="메인(전체보기) 페이지" onclick="modal()" /></div>
+    <div><img class="slickImg" src="/assets/img/project/News-Viewer/waitPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="대기 페이지" onclick="modal()" /></div>
+    <div><img class="slickImg" src="/assets/img/project/News-Viewer/sportsPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="스포츠 카테고리" onclick="modal()" /></div>
+    <div><img class="slickImg" src="/assets/img/project/News-Viewer/newsPage.jpg" style="width: auto; height: 500px; margin: 0 auto;" title="뉴스 클릭시 이동" onclick="modal()" /></div>
+</div>
+
+<blockquote>
+  <p><mark>News-Viewer</mark> 는 뉴스 API 를 받아와 렌더링하는 어플리케이션 입니다. <br />
+기본적으로 메인 페이지에서 카테고리에 상관없이 <strong>전체보기</strong> 로 뉴스를 보고, <strong>카테고리</strong>에 따라 관련 기사들을 볼수 있으며, 기사를 클릭하면 해당 기사를 발행한 신문사 사이트로 이동합니다.</p>
+</blockquote>
+
+<h2 id="link">Link</h2>
+
+<ul>
+  <li><strong><a href="https://github.com/steven-yn/News-Viewer-React">Code (github)</a></strong></li>
+</ul>
+
+<h2 id="demo">Demo</h2>
+
+<p>준비중
+(<code class="language-plaintext highlighter-rouge">newsapi.org</code> 의 가격정책이 바뀐 이유로 브라우저로 바로 호출 할수 없게 됐습니다.)</p>
+
+<h2 id="stacks">Stacks</h2>
+
+<ul>
+  <li>Framework : <code class="language-plaintext highlighter-rouge">React(FE)</code></li>
+  <li>Library : <code class="language-plaintext highlighter-rouge">Styled-Componets</code> <code class="language-plaintext highlighter-rouge">Axios</code> <code class="language-plaintext highlighter-rouge">Custom Component</code> <code class="language-plaintext highlighter-rouge">react-router-dom</code></li>
+  <li>Package : <code class="language-plaintext highlighter-rouge">Yarn</code> <code class="language-plaintext highlighter-rouge">webpack</code></li>
+</ul>
+
+<h2 id="개발당시-느낀점들">개발당시 느낀점들</h2>
+
+<blockquote>
+  <p><strong>외부 API</strong> 를 가져와 사용하는것을 처음 해본 프로젝트 입니다.     <br />
+<strong>JSON 형태</strong>로 뉴스 정보를 받아와서 UI를 구성하고 데이터를 출력하는 형태입니다.      <br />
+API 호출 뿐만 아니라, <strong>router</strong> 와 호출시 발생하는 지연을 처리하는 <strong>비동기 상태관리</strong>에 대해서도      <br />
+이해도를 높일수 있었습니다. 또한 주된 작업은 이런 데이터를 받아와서 <strong>렌더링</strong> 하는것임을 파악      <br />
+할 수 있던 사이드 프로젝트 였습니다.</p>
+</blockquote>
+
+<div id="modalLayer" style="display: none">
+  <div class="modalBox">
+    <div><img class="modalImg" src="/assets/img/project/News-Viewer/mainPage.jpg" style="width: auto; height: auto; margin: 0 auto;" title="메인(전체보기) 페이지" /></div>
+    <div><img class="modalImg" src="/assets/img/project/News-Viewer/waitPage.jpg" style="width: auto; height: auto; margin: 0 auto;" title="대기 페이지" /></div>
+    <div><img class="modalImg" src="/assets/img/project/News-Viewer/sportsPage.jpg" style="width: auto; height: auto; margin: 0 auto;" title="스포츠 카테고리" /></div>
+    <div><img class="modalImg" src="/assets/img/project/News-Viewer/newsPage.jpg" style="width: auto; height: auto; margin: 0 auto;" title="뉴스 클릭시 이동" /></div>
+  </div>
+  <div class="btnBox">
+    <span id="closeButton" onclick="modClose()" style="width: auto; height: auto; border: solid 1px; border-radius: 5px; padding: 5px 10px 5px 10px; color: white">
+      닫기
+    </span>
+  </div>
+<div>
+</div></div>
+
+  
+</div>
+</article>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4CCSQQR0L1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4CCSQQR0L1');
+</script>
+
+<div class="page-control">
+    <div>
+      
+      <a id="prev" class="button" href="/project/2021-10-28-Todo-App/">&laquo; 이전글</a>
+      
+    </div>
+    <div>
+      
+      <a id="next" class="button" href="/project/2021-11-29-Relog/"> 다음글 &raquo;</a>
+      
+    </div>
+  </div>
+
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4" style="margin: 10px;">
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    Author
+  </h2>
+
+<!--게시물 밑에 작성자 -->
+    <!-- 프로필 이미지 -->
+        
+            
+
+<div class="img-set" style="background-color: rgb(255, 255, 255);"></div>
+<img
+  
+    src="/assets/me/me2.jpg"
+    srcset="/assets/me/me2.jpg 1x,/assets/me/me2.jpg 2x"
+    
+  
+  alt="SungYeon Yoon"
+  class="avatar"
+  
+  loading="lazy"
+/>
+</div>
+        
+    <!-- 글 -->
+    <div class="author-body-description" >
+        <span style = " font-size:1.4em;  color: rgb(0, 0, 0);"><strong><p>SungYeon Yoon</p>
+</strong></span>
+        <b style = "font-size:0.8em; color: rgb(141, 141, 141);"><p>안녕하세요 !      <br />
+<span style="color: darkorange">새로운 것을 찾아 항해하고 끝까지 포기하지 않는</span>      <br />
+개발자 <span style="color: teal"><strong>윤성연</strong></span> 입니다.  <br />
+더 좋은 웹을 만들어 나가기 위해 노력 하겠습니다.</p>
+
+<p><span style="color: gray"> 혹시라도 저에게 조금 관심이 생기셨다면, <a href="/assets/me/Résumé.pdf">Résumé</a> 를 확인하시고 <br />
+연락 주신다면 정말 감사드리겠습니다 ! </span></p>
+
+<p>이름 : 윤성연 (steven)     <br />
+닉네임 : 윤바다 (yoonOcean)     <br />
+E-mail : steven_yoon1009@naver.com</p>
+
+<p>More Info</p>
+
+<ul>
+  <li><a href="https://steven-yn.github.io" style="color: skyblue"> 포트폴리오 (현재사이트) <a></a></a></li>
+  <li><a href="https://github.com/steven-yn" style="color: skyblue"> GitHub <a></a></a></li>
+  <li><a href="https://yoonocean.tistory.com/" style="color: skyblue"> Blog <a></a></a></li>
+  <li><a href="https://boulder-grouse-005.notion.site/yoonOcean-Dev-Log-fad49379d7db4a118e025b4c73f52d9d" style="color: skyblue"> Notion <a></a></a></li>
+  <li><a href="https://www.notion.so/Project-cdd4db87d6ac40ec85ad049694bf85e5" style="color: skyblue"> PSG Team Project Study Group Notion <a></a></a></li>
+  <li><a href="https://github.com/psgstellar" style="color: skyblue"> PSG Team Project Study Group Github <a></a></a></li>
+</ul>
+
+<p>Present Publishing Site</p>
+
+<ul>
+  <li><a href="http://3.143.160.44:4000/" style="color: skyblue"> React Blog Project <a></a></a></li>
+  <li><a href="https://steven-yn.github.io/OceanVue-VanilaJS-Framework/" style="color: skyblue"> OceanVue <a></a></a></li>
+</ul>
+
+<p><em>프론트엔드 개발자 구직중</em></p>
+</b>
+    </div>
+    <!--소셜-->
+    <div class="sidebar-social">
+    <div class="sidebar-social">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/steven-yn" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:steven_yoon1009@naver.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://yoonocean.tistory.com/" title="RSS" class="no-mark-external">
+      <span class="icon-rss2"></span>
+      <span class="sr-only">RSS</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/s_____yn.1009" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+    </div>
+
+    
+
+</div>
+
+  </aside>
+
+
+
+
+
+
+<aside class="related mb4" role="complementary">
+  <h2 class="hr-bottom">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+        
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-20T00:00:00+09:00">2022 02 20</time>
+    <a href="/project/2022-02-20-petBook/" class="flip-title"><span>petBook </span></a>
+  </div>
+</li>
+      
+    
+      
+        
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-14T00:00:00+09:00">2022 02 14</time>
+    <a href="/project/2022-02-14-Ocean-Vue/" class="flip-title"><span>OceanVue </span></a>
+  </div>
+</li>
+      
+    
+      
+        
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2022-02-06T00:00:00+09:00">2022 02 06</time>
+    <a href="/project/2022-02-06-Hyades/" class="flip-title"><span>Hyades - PSG 팀 공식 홈페이지 </span></a>
+  </div>
+</li>
+      
+    
+  </ul>
+</aside>
+
+<aside class="comments" role="complementary">
+    <h2>Comments</h2>
+    <hr/>
+    <script src="https://utteranc.es/client.js"
+            repo="steven-yn/GH-PF_comments"
+            issue-term="pathname"
+            theme="photon-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+</aside>
+
+
+  
+    <footer class="content" role="contentinfo">
+    <hr/>
+    
+        <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+    
+
+    <p><small>----------Powered by Hydejack----------</p> <p><span id="_version">윤바다</span></small></p>
+    <hr class="sr-only"/>
+    </footer>
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+    <div class="sidebar-about" style="margin-bottom: 10px;">
+
+        <!--블로그프로필 이미지-->
+        
+        <a class="no-hover" style="margin-bottom: 50px;" href="/" tabindex="-1">
+            <img src="/assets/me/me.jpg" class="avatar" alt="윤성연" width="130" height="130" loading="lazy" />
+        </a>
+        <!--블로그타이틀-->
+        <div class="sidebartitle" style="margin-bottom: 95px;">
+            <a class="sidebar-title" href="/">
+                <h2 class="h1">윤성연</h2>
+            </a>
+        </div>
+        
+        <!--블로그 간단한 설명-->
+        
+        
+        <p class="">
+            윤바다의 개발항해
+
+        </p>
+        
+    </div>
+    
+    <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/about/"
+          class="sidebar-nav-item "
+          
+        >
+          About
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/project/"
+          class="sidebar-nav-item "
+          
+        >
+          Project
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/CHANGELOG/"
+          class="sidebar-nav-item "
+          
+        >
+          CHANGELOG
+        </a>
+      </li>
+    
+  
+</ul>
+
+    </nav>
+
+    <!--소셜바-->
+    
+    <div class="sidebar-social">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/steven-yn" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:steven_yoon1009@naver.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://yoonocean.tistory.com/" title="RSS" class="no-mark-external">
+      <span class="icon-rss2"></span>
+      <span class="sr-only">RSS</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/s_____yn.1009" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+    </div>
+    
+    <!--블로그 조회수-->
+    <div style="text-align: center;">
+        <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsteven-yn.github.io&count_bg=%233D96C8&title_bg=%23715D7C&icon=smugmug.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+    </div>
+
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+  <script>!function(w, d) {
+    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    /**/
+      ga('create', 'G-4CCSQQR0L1', 'auto');
+    /**/
+
+    var pushStateEl = d.getElementById('_pushState');
+    var timeoutId;
+    pushStateEl.addEventListener('hy-push-state-load', function() {
+      w.clearTimeout(timeoutId);
+      timeoutId = w.setTimeout(function() {
+        ga('set', 'page', w.location.pathname);
+        ga('send', 'pageview');
+      }, 500);
+    });
+
+    d.addEventListener('hy--cookies-ok', function () {
+      w.ga(function(tracker) {
+        w.ga("set", "anonymizeIp", undefined);
+        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+      });
+    });
+
+    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+  }(window, document);</script>
+
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>
