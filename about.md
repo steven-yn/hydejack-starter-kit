@@ -2,7 +2,7 @@
 layout: about
 image: /assets/img/me/me.jpg
 description: >
-  프론트엔드 개발을 공부하고 있습니다.
+  프론트엔드 개발자 윤성연 포트폴리오 사이트
 hide_description: true
 ---
 
